@@ -47,7 +47,7 @@ export default function Tools(){
         <div className="mt-12 text-center space-y-4">
           <h2 className="text-2xl font-semibold">Coming Soon</h2>
           <p className="text-muted-foreground">
-            We're constantly expanding our toolkit. Stay tuned for more powerful tools.
+            We&apos;re constantly expanding our toolkit. Stay tuned for more powerful tools.
           </p>
         </div>
       </main>

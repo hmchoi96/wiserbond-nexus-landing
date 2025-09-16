@@ -1,6 +1,6 @@
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 export default function NexusDetail(){
@@ -24,7 +24,7 @@ export default function NexusDetail(){
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
                 Traditional decision-making relies on current data and recent experiences. 
-                Nexus connects your organization's historical wisdom with present conditions, 
+                Nexus connects your organization&apos;s historical wisdom with present conditions, 
                 enabling more informed strategic decisions.
               </p>
               <ul className="space-y-2 text-sm">

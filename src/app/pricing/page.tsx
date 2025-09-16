@@ -11,7 +11,7 @@ export default function Pricing(){
         <div className="text-center space-y-4">
           <h1 className="text-3xl font-semibold">Pricing</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Choose the plan that fits your organization's needs. All plans include access to our core Nexus platform.
+            Choose the plan that fits your organization&apos;s needs. All plans include access to our core Nexus platform.
           </p>
         </div>
         
@@ -33,7 +33,7 @@ export default function Pricing(){
                 <li>✓ Up to 5 team members</li>
                 <li>✓ Basic Akashic Record access</li>
                 <li>✓ Standard support</li>
-                <li>✓ Core "Then vs Now" features</li>
+                <li>✓ Core &ldquo;Then vs Now&rdquo; features</li>
               </ul>
             </CardContent>
           </Card>

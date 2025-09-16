@@ -71,7 +71,7 @@ export default function Waitlist(){
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-semibold">Questions?</h2>
           <p className="text-muted-foreground">
-            Have questions about Nexus or our waitlist? We'd love to hear from you.
+            Have questions about Nexus or our waitlist? We&apos;d love to hear from you.
           </p>
           <a 
             href="mailto:hmchoi@sfu.ca" 

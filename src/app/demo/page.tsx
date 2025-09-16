@@ -21,7 +21,7 @@ export default function Demo(){
             <CardHeader>
               <CardTitle>Schedule Your Demo</CardTitle>
               <CardDescription>
-                Tell us about your team and use case, and we'll prepare a customized demonstration.
+                Tell us about your team and use case, and we&apos;ll prepare a customized demonstration.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -33,7 +33,7 @@ export default function Demo(){
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle>What You'll See</CardTitle>
+              <CardTitle>What You&apos;ll See</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="text-sm">
@@ -74,7 +74,7 @@ export default function Demo(){
               </div>
               <div className="text-sm">
                 <div className="font-medium">Follow-up: Custom proposal</div>
-                <div className="text-muted-foreground">Tailored to your organization's needs</div>
+                <div className="text-muted-foreground">Tailored to your organization&apos;s needs</div>
               </div>
             </CardContent>
           </Card>
@@ -83,7 +83,7 @@ export default function Demo(){
         <div className="text-center space-y-4">
           <h2 className="text-2xl font-semibold">Ready to Get Started?</h2>
           <p className="text-muted-foreground">
-            Can't wait for a demo? Join our waitlist to be among the first to access Nexus.
+            Can&apos;t wait for a demo? Join our waitlist to be among the first to access Nexus.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a 

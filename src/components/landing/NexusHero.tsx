@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -23,7 +22,7 @@ export default function NexusHero(){
             Connect past judgments to present conditions
           </h1>
           <p className="text-base md:text-lg text-muted-foreground">
-            Macro strategy copilot with Akashic Record (on‑prem SLM). <br /> Compare "Then vs Now" in minutes with external data connections.
+            Macro strategy copilot with Akashic Record (on‑prem SLM). <br /> Compare &ldquo;Then vs Now&rdquo; in minutes with external data connections.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/demo" className="inline-flex">
@@ -45,7 +44,7 @@ export default function NexusHero(){
         </div>
         <div className="lg:col-span-5">
           <div className="rounded-xl p-6 bg-white border border-black/5 shadow-sm">
-            <div className="text-sm font-medium mb-2">"Then vs Now" Demo Card</div>
+            <div className="text-sm font-medium mb-2">&ldquo;Then vs Now&rdquo; Demo Card</div>
             <p className="text-xs text-muted-foreground mb-4">
               Similar case search, difference comparison, risk summary
             </p>
