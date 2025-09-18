@@ -28,6 +28,7 @@ export async function POST(req: Request) {
     const properties: Record<string, unknown> = {
       Name: { title: [{ text: { content: email } }] },
       Email: { email },
+      Company: { rich_text: [{ text: { content: "" } }] }, // 빈 값으로 저장
     };
     
     if (source) {

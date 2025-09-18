@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function WaitlistForm(){
   const [email, setEmail] = useState("");
+  const [note, setNote] = useState("");
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   
@@ -22,6 +23,7 @@ export function WaitlistForm(){
         headers: {"Content-Type": "application/json"}, 
         body: JSON.stringify({ 
           email,
+          note,
           source: "landing",
           referrer: typeof window !== "undefined" ? document.referrer : ""
         }) 
@@ -31,6 +33,7 @@ export function WaitlistForm(){
       
       if (result.ok) {
         setEmail("");
+        setNote("");
         setStatus("success");
       } else {
         setStatus("error");
@@ -44,7 +47,7 @@ export function WaitlistForm(){
   }
   
   return (
-    <form onSubmit={submit} className="flex gap-2 w-full max-w-md">
+    <form onSubmit={submit} className="space-y-3 w-full max-w-md">
       <Input 
         placeholder="work@company.com" 
         value={email} 
@@ -52,12 +55,20 @@ export function WaitlistForm(){
         type="email"
         required
       />
+      <Textarea 
+        placeholder="팀/사용 맥락을 간단히 적어주세요 (선택)" 
+        value={note} 
+        onChange={e => setNote(e.target.value)} 
+        rows={3}
+        className="w-full"
+      />
       <Button 
         type="submit"
         style={{ background: "var(--brand)" }}
         disabled={!email || loading}
+        className="w-full"
       >
-        {loading ? "Joining..." : "Join"}
+        {loading ? "Joining..." : "Join Waitlist"}
       </Button>
       {/* 허니팟 필드 */}
       <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
