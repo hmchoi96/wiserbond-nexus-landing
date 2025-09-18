@@ -10,15 +10,15 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/5">
       <div className="max-w-7xl mx-auto h-16 px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-3">
           <Image 
             src="/Submark logo.png" 
             alt="Wiserbond Logo" 
-            width={32} 
-            height={32}
-            className="w-8 h-8"
+            width={48} 
+            height={48}
+            className="w-12 h-12"
           />
-          <span className="font-semibold" style={{ color: "var(--brand)" }}>
+          <span className="font-semibold text-lg" style={{ color: "var(--brand)" }}>
             Wiserbond · Nexus
           </span>
         </Link>
