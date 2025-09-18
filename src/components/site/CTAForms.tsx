@@ -6,68 +6,112 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function WaitlistForm(){
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   
-  async function submit(){
+  async function submit(e: React.FormEvent){
+    e.preventDefault();
+    if (!email || loading) return;
+    
+    setLoading(true);
+    setStatus("idle");
+    
     try {
-      await fetch("/api/lead", {
+      const response = await fetch("/api/waitlist", {
         method: "POST", 
         headers: {"Content-Type": "application/json"}, 
-        body: JSON.stringify({ type: "waitlist", email }) 
+        body: JSON.stringify({ 
+          email,
+          source: "landing",
+          referrer: typeof window !== "undefined" ? document.referrer : ""
+        }) 
       });
-      setEmail("");
-      alert("Added to waitlist.");
+      
+      const result = await response.json();
+      
+      if (result.ok) {
+        setEmail("");
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
     } catch (error) {
       console.error("Error submitting waitlist:", error);
-      alert("Error submitting. Please try again.");
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
   }
   
   return (
-    <div className="flex gap-2 w-full max-w-md">
+    <form onSubmit={submit} className="flex gap-2 w-full max-w-md">
       <Input 
         placeholder="work@company.com" 
         value={email} 
         onChange={e => setEmail(e.target.value)} 
         type="email"
+        required
       />
       <Button 
-        onClick={submit} 
+        type="submit"
         style={{ background: "var(--brand)" }}
-        disabled={!email}
+        disabled={!email || loading}
       >
-        Join
+        {loading ? "Joining..." : "Join"}
       </Button>
-    </div>
+      {/* 허니팟 필드 */}
+      <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
+      {status === "success" && <p className="text-green-600 text-sm">Added to waitlist!</p>}
+      {status === "error" && <p className="text-red-600 text-sm">Please try again</p>}
+    </form>
   );
 }
 
 export function DemoForm(){
   const [email, setEmail] = useState("");
   const [note, setNote] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   
-  async function submit(){
+  async function submit(e: React.FormEvent){
+    e.preventDefault();
+    if (!email || loading) return;
+    
+    setLoading(true);
+    setStatus("idle");
+    
     try {
-      await fetch("/api/lead", {
+      const response = await fetch("/api/demo", {
         method: "POST", 
         headers: {"Content-Type": "application/json"}, 
-        body: JSON.stringify({ type: "demo", email, note }) 
+        body: JSON.stringify({ email, note }) 
       });
-      setEmail(""); 
-      setNote("");
-      alert("Demo requested.");
+      
+      const result = await response.json();
+      
+      if (result.ok) {
+        setEmail(""); 
+        setNote("");
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
     } catch (error) {
       console.error("Error submitting demo request:", error);
-      alert("Error submitting. Please try again.");
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
   }
   
   return (
-    <div className="space-y-3 w-full max-w-lg">
+    <form onSubmit={submit} className="space-y-3 w-full max-w-lg">
       <Input 
         placeholder="work@company.com" 
         value={email} 
         onChange={e => setEmail(e.target.value)} 
         type="email"
+        required
       />
       <Textarea 
         className="w-full" 
@@ -77,12 +121,16 @@ export function DemoForm(){
         onChange={e => setNote(e.target.value)} 
       />
       <Button 
-        onClick={submit} 
+        type="submit"
         style={{ background: "var(--brand)" }}
-        disabled={!email}
+        disabled={!email || loading}
       >
-        Request Demo
+        {loading ? "Requesting..." : "Request Demo"}
       </Button>
-    </div>
+      {/* 허니팟 필드 */}
+      <input type="text" name="company" className="hidden" tabIndex={-1} autoComplete="off" />
+      {status === "success" && <p className="text-green-600 text-sm">Demo requested!</p>}
+      {status === "error" && <p className="text-red-600 text-sm">Please try again</p>}
+    </form>
   );
 }
