@@ -2,7 +2,6 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { WaitlistForm } from "@/components/site/CTAForms";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Image from "next/image";
 
 export default function Waitlist(){
   return (
@@ -10,16 +9,7 @@ export default function Waitlist(){
       <Nav />
       <main className="max-w-4xl mx-auto px-4 py-16 space-y-8">
         <div className="text-center space-y-4">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Image 
-              src="/wiserbond logoo.png" 
-              alt="Wiserbond Logo" 
-              width={40} 
-              height={40}
-              className="w-10 h-10"
-            />
-            <h1 className="text-3xl font-semibold">Join Waitlist</h1>
-          </div>
+          <h1 className="text-3xl font-semibold">Join Waitlist</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Be among the first to experience Nexus. Get early access to our macro strategy copilot 
             and help shape the future of strategic decision-making.
