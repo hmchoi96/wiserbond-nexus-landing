@@ -14,7 +14,7 @@ export default function NexusHero(){
               initial={{ opacity: 0, y: 8 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs bg-white/80 border-black/5"
+              className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-base bg-white/80 border-black/5"
             >
               Noise Off. Calm Think.
             </motion.span>
