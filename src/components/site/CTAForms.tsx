@@ -56,7 +56,7 @@ export function WaitlistForm(){
         required
       />
       <Textarea 
-        placeholder="팀/사용 맥락을 간단히 적어주세요 (선택)" 
+        placeholder="Brief context about your team/use case (optional)" 
         value={note} 
         onChange={e => setNote(e.target.value)} 
         rows={3}
@@ -127,7 +127,7 @@ export function DemoForm(){
       <Textarea 
         className="w-full" 
         rows={4} 
-        placeholder="팀/사용 맥락을 간단히 적어주세요" 
+        placeholder="Brief context about your team/use case" 
         value={note} 
         onChange={e => setNote(e.target.value)} 
       />
