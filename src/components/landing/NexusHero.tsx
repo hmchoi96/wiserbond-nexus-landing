@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NexusHero(){
   return (
@@ -44,7 +45,16 @@ export default function NexusHero(){
         </div>
         <div className="lg:col-span-5">
           <div className="rounded-xl p-6 bg-white border border-black/5 shadow-sm">
-            <div className="text-sm font-medium mb-2">&ldquo;Then vs Now&rdquo; Demo Card</div>
+            <div className="flex items-center gap-2 mb-2">
+              <Image 
+                src="/wiserbond logoo.png" 
+                alt="Wiserbond Logo" 
+                width={20} 
+                height={20}
+                className="w-5 h-5"
+              />
+              <span className="text-sm font-medium">&ldquo;Then vs Now&rdquo; Demo Card</span>
+            </div>
             <p className="text-xs text-muted-foreground mb-4">
               Similar case search, difference comparison, risk summary
             </p>
