@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { DemoForm } from "@/components/site/CTAForms";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { canonicalFor } from "@/lib/url";
+
+export const metadata: Metadata = {
+  title: "Request a Demo",
+  description:
+    "See Nexus in action. Schedule a personalized demo to understand how our macro strategy copilot can transform your decision-making process. 30-45 minute live demonstration.",
+  alternates: { canonical: canonicalFor("/demo") },
+  openGraph: {
+    title: "Request a Demo | Wiserbond Nexus",
+    description:
+      "See Nexus in action. Schedule a personalized demo to understand how our macro strategy copilot can transform your decision-making process.",
+  },
+  twitter: {
+    title: "Request a Demo | Wiserbond Nexus",
+    description:
+      "See Nexus in action. Schedule a personalized demo to understand how our macro strategy copilot can transform your decision-making process.",
+  },
+};
 
 export default function Demo(){
   return (

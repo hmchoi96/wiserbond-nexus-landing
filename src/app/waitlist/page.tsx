@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { WaitlistForm } from "@/components/site/CTAForms";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { canonicalFor } from "@/lib/url";
+
+export const metadata: Metadata = {
+  title: "Join Waitlist",
+  description:
+    "Be among the first to experience Nexus. Get early access to our macro strategy copilot and help shape the future of strategic decision-making. Priority access and special pricing.",
+  alternates: { canonical: canonicalFor("/waitlist") },
+  openGraph: {
+    title: "Join Waitlist | Wiserbond Nexus",
+    description:
+      "Be among the first to experience Nexus. Get early access to our macro strategy copilot and help shape the future of strategic decision-making.",
+  },
+  twitter: {
+    title: "Join Waitlist | Wiserbond Nexus",
+    description:
+      "Be among the first to experience Nexus. Get early access to our macro strategy copilot and help shape the future of strategic decision-making.",
+  },
+};
 
 export default function Waitlist(){
   return (

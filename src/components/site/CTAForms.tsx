@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { analyticsEvents } from "@/lib/analytics";
 
 export function WaitlistForm(){
   const [email, setEmail] = useState("");
@@ -35,6 +36,8 @@ export function WaitlistForm(){
         setEmail("");
         setNote("");
         setStatus("success");
+        // 이벤트 추적
+        analyticsEvents.waitlistJoined(email);
       } else {
         setStatus("error");
       }
@@ -104,6 +107,8 @@ export function DemoForm(){
         setEmail(""); 
         setNote("");
         setStatus("success");
+        // 이벤트 추적
+        analyticsEvents.demoRequested(email);
       } else {
         setStatus("error");
       }

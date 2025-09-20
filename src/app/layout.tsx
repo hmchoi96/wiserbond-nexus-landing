@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import { defaultMetadata, getRobotsMetadata } from "@/lib/seo";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,13 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wiserbond Nexus — Noise Off. Calm Think.",
-  description: "Connect past judgments to present conditions. Then vs Now in minutes.",
-  openGraph: {
-    title: "Wiserbond Nexus",
-    description: "Macro strategy copilot with Akashic Record (on‑prem SLM).",
-    images: ["/og/nexus-og.png"],
-  },
+  ...defaultMetadata,
+  robots: getRobotsMetadata(),
+};
+
+export const viewport: Viewport = {
+  themeColor: "#051F5B",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -33,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-white to-[#F6F8FF] text-slate-900`}
       >
+        <GoogleAnalytics />
         <Providers>{children}</Providers>
       </body>
     </html>

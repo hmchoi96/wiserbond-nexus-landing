@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { canonicalFor } from "@/lib/url";
+
+export const metadata: Metadata = {
+  title: "Pricing",
+  description:
+    "Early Access plan for teams. $2,500 per org for up to 5 users. 90-day on-prem pilot available. Request a demo for details.",
+  alternates: { canonical: canonicalFor("/pricing") },
+  openGraph: {
+    title: "Pricing | Wiserbond Nexus",
+    description:
+      "Early Access plan for teams. $2,500 per org for up to 5 users. 90-day on-prem pilot available. Request a demo for details.",
+  },
+  twitter: {
+    title: "Pricing | Wiserbond Nexus",
+    description:
+      "Early Access plan for teams. $2,500 per org for up to 5 users. 90-day on-prem pilot available.",
+  },
+};
 
 export default function Pricing(){
   return (

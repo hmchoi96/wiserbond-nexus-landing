@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { canonicalFor } from "@/lib/url";
+
+export const metadata: Metadata = {
+  title: "Nexus - Akashic Record SLM for Macro Reasoning",
+  description:
+    "On-prem judgment memory with Akashic Record SLM. Macro→Micro reasoning, Then vs Now comparison, and historical decision pattern analysis for investment teams.",
+  alternates: { canonical: canonicalFor("/tools/nexus") },
+  openGraph: {
+    title: "Nexus - Akashic Record SLM for Macro Reasoning",
+    description:
+      "On-prem judgment memory with Akashic Record SLM. Macro→Micro reasoning, Then vs Now comparison, and historical decision pattern analysis for investment teams.",
+  },
+  twitter: {
+    title: "Nexus - Akashic Record SLM for Macro Reasoning",
+    description:
+      "On-prem judgment memory with Akashic Record SLM. Macro→Micro reasoning, Then vs Now comparison, and historical decision pattern analysis for investment teams.",
+  },
+};
 
 export default function NexusDetail(){
   return (
