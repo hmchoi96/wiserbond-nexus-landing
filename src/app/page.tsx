@@ -3,6 +3,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import NexusHero from "@/components/landing/NexusHero";
 import Sections from "@/components/landing/Sections";
+import { canonicalFor } from "@/lib/url";
 
 export const metadata: Metadata = {
   title: "On-prem Judgment Memory for Macro & Risk Teams",
