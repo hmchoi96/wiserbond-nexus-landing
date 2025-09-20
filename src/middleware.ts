@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(_req: NextRequest) {
+export function middleware(req: NextRequest) {
   const res = NextResponse.next();
 
   // 프리뷰 환경에서 noindex 헤더 설정
@@ -13,6 +13,9 @@ export function middleware(_req: NextRequest) {
   if (isPreview) {
     res.headers.set("X-Robots-Tag", "noindex, nofollow");
   }
+
+  // req를 사용하지 않지만 NextRequest 타입을 유지하기 위해 void로 처리
+  void req;
 
   return res;
 }
