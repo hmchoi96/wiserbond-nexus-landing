@@ -1,6 +1,6 @@
 // 이벤트 추적 유틸리티
 // GA4, PostHog 등에 연결 가능
-import { event as gtagEvent } from './gtag';
+import { event as gtagEvent, isGtagLoaded } from './gtag';
 
 export type AnalyticsEvent = {
   event: string;
@@ -18,7 +18,7 @@ export const trackEvent = (event: AnalyticsEvent) => {
   }
 
   // Google Analytics 4에 전송
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (isGtagLoaded()) {
     gtagEvent({
       action: event.event,
       category: 'engagement',

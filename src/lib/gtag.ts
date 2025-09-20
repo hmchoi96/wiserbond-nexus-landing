@@ -31,6 +31,11 @@ export const event = ({
   }
 };
 
+// gtag 함수가 로드되었는지 확인하는 헬퍼 함수
+export const isGtagLoaded = (): boolean => {
+  return typeof window !== 'undefined' && typeof window.gtag === 'function';
+};
+
 // 전역 gtag 타입 선언
 declare global {
   interface Window {
