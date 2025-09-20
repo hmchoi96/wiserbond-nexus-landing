@@ -3,9 +3,6 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import NexusHero from "@/components/landing/NexusHero";
 import Sections from "@/components/landing/Sections";
-import StructuredData from "@/components/StructuredData";
-import { canonicalFor } from "@/lib/url";
-import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "On-prem Judgment Memory for Macro & Risk Teams",
@@ -29,8 +26,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Wiserbond",
-  url: SITE.baseUrl,
-  logo: `${SITE.baseUrl}/og/wiserbond-logo.png`,
+  url: "https://www.wiserbond.com",
+  logo: "https://www.wiserbond.com/og/wiserbond-logo.png",
   sameAs: ["https://www.linkedin.com/company/wiserbond"]
 };
 
@@ -45,7 +42,7 @@ const softwareApplicationSchema = {
     category: "Early Access",
     description: "Early Access plan for teams"
   },
-  provider: { "@type": "Organization", name: "Wiserbond", url: SITE.baseUrl },
+  provider: { "@type": "Organization", name: "Wiserbond", url: "https://www.wiserbond.com" },
   description:
     "On-prem judgment memory for macro & risk teams. Compare 'then vs now', auto-recap decisions, and reduce re-research time."
 };
