@@ -6,19 +6,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { canonicalFor } from "@/lib/url";
 
 export const metadata: Metadata = {
-  title: "Join Waitlist",
+  title: "Request an Interview | Wiserbond",
   description:
-    "Be among the first to experience Nexus. Get early access to our macro strategy copilot and help shape the future of strategic decision-making. Priority access and special pricing.",
+    "Request a 15-minute conversation about piloting judgment memory for your team. No pitch deck, just questions.",
   alternates: { canonical: canonicalFor("/waitlist") },
   openGraph: {
-    title: "Join Waitlist | Wiserbond Nexus",
+    title: "Request an Interview | Wiserbond",
     description:
-      "Be among the first to experience Nexus. Get early access to our macro strategy copilot and help shape the future of strategic decision-making.",
+      "Request a 15-minute conversation about piloting judgment memory for your team. No pitch deck, just questions.",
   },
   twitter: {
-    title: "Join Waitlist | Wiserbond Nexus",
+    title: "Request an Interview | Wiserbond",
     description:
-      "Be among the first to experience Nexus. Get early access to our macro strategy copilot and help shape the future of strategic decision-making.",
+      "Request a 15-minute conversation about piloting judgment memory for your team. No pitch deck, just questions.",
   },
 };
 
@@ -28,19 +28,19 @@ export default function Waitlist(){
       <Nav />
       <main className="max-w-4xl mx-auto px-4 py-16 space-y-8">
         <div className="text-center space-y-4">
-          <h1 className="text-3xl font-semibold">Join Waitlist</h1>
+          <h1 className="text-3xl font-semibold">Request a 15-min Interview</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Be among the first to experience Nexus. Get early access to our macro strategy copilot 
-            and help shape the future of strategic decision-making.
+            We&apos;re looking for teams who want to pilot judgment memory in their workflow.<br />
+            No pitch deck, just questions about how your team preserves decisions.
           </p>
         </div>
         
         <div className="max-w-md mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle>Get Early Access</CardTitle>
+              <CardTitle>Get in Touch</CardTitle>
               <CardDescription>
-                Join our waitlist to be notified when Nexus becomes available.
+                Leave your email and we&apos;ll reach out to schedule a short conversation.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -49,54 +49,40 @@ export default function Waitlist(){
           </Card>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Early Access Benefits</CardTitle>
+              <CardTitle className="text-lg">What We&apos;ll Discuss</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
-              <div>✓ Priority access to new features</div>
-              <div>✓ Direct feedback channel to our team</div>
-              <div>✓ Special pricing for early adopters</div>
-              <div>✓ Exclusive beta testing opportunities</div>
+              <div>• How your team currently preserves decision context</div>
+              <div>• Pain points with re-researching past judgments</div>
+              <div>• Whether an offline pilot makes sense for you</div>
             </CardContent>
           </Card>
           
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">What to Expect</CardTitle>
+              <CardTitle className="text-lg">What This Isn&apos;t</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2 text-sm">
-              <div>• Regular updates on development progress</div>
-              <div>• Early access to documentation</div>
-              <div>• Invitation to private demos</div>
-              <div>• Community access for early users</div>
-            </CardContent>
-          </Card>
-          
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">Timeline</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2 text-sm">
-              <div>• Q1 2024: Private beta launch</div>
-              <div>• Q2 2024: Early access program</div>
-              <div>• Q3 2024: General availability</div>
-              <div>• Ongoing: Feature updates</div>
+              <div>• No sales pitch or demo pressure</div>
+              <div>• No commitment required</div>
+              <div>• Just a conversation to see if there&apos;s a fit</div>
             </CardContent>
           </Card>
         </div>
         
         <div className="text-center space-y-4">
-          <h2 className="text-2xl font-semibold">Questions?</h2>
+          <h2 className="text-2xl font-semibold">Prefer Email?</h2>
           <p className="text-muted-foreground">
-            Have questions about Nexus or our waitlist? We&apos;d love to hear from you.
+            You can also reach out directly. We&apos;d love to hear from you.
           </p>
           <a 
             href="mailto:hmchoi@sfu.ca" 
             className="inline-flex px-6 py-3 border border-border rounded-lg hover:bg-accent transition-colors"
           >
-            Contact Us
+            hmchoi@sfu.ca
           </a>
         </div>
       </main>

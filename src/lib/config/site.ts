@@ -4,12 +4,10 @@ export const brand = {
 } as const;
 
 export const nav = [
-  { label: "Why", href: "/#why" },
-  { label: "Product", href: "/#product" },
-  { label: "Architecture", href: "/#architecture" },
-  { label: "Security", href: "/#security" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "Tools", href: "/tools" },
+  { label: "Problem", href: "/#problem" },
+  { label: "Solution", href: "/#solution" },
+  { label: "For", href: "/#for" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const tools = [

@@ -6,19 +6,19 @@ import Sections from "@/components/landing/Sections";
 import { canonicalFor } from "@/lib/url";
 
 export const metadata: Metadata = {
-  title: "On-prem Judgment Memory for Macro & Risk Teams",
+  title: "Wiserbond | Judgment Memory for Teams",
   description:
-    "On-prem judgment memory that turns past decisions into today's edge. One-click 'then vs now' macro comparison, auto-recap, and faster research for hedge funds and corporate risk teams.",
+    "Turn past decisions into reusable judgment memory. Offline-first, on-prem. Your data never leaves your network.",
   alternates: { canonical: canonicalFor("/") },
   openGraph: {
-    title: "On-prem Judgment Memory for Macro & Risk Teams",
+    title: "Wiserbond | Judgment Memory for Teams",
     description:
-      "On-prem judgment memory that turns past decisions into today's edge. One-click 'then vs now' macro comparison, auto-recap, and faster research for hedge funds and corporate risk teams.",
+      "Turn past decisions into reusable judgment memory. Offline-first, on-prem. Your data never leaves your network.",
   },
   twitter: {
-    title: "On-prem Judgment Memory for Macro & Risk Teams",
+    title: "Wiserbond | Judgment Memory for Teams",
     description:
-      "On-prem judgment memory that turns past decisions into today's edge. One-click 'then vs now' macro comparison, auto-recap, and faster research for hedge funds and corporate risk teams.",
+      "Turn past decisions into reusable judgment memory. Offline-first, on-prem. Your data never leaves your network.",
   },
 };
 
@@ -35,17 +35,17 @@ const organizationSchema = {
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Wiserbond Nexus",
+  name: "Wiserbond",
   applicationCategory: "BusinessApplication",
-  operatingSystem: "On-premise; Docker; Linux",
+  operatingSystem: "On-premise; Local; Offline",
   offers: { 
     "@type": "Offer", 
-    category: "Early Access",
-    description: "Early Access plan for teams"
+    category: "Pilot",
+    description: "15-min interview for pilot teams"
   },
   provider: { "@type": "Organization", name: "Wiserbond", url: "https://www.wiserbond.com" },
   description:
-    "On-prem judgment memory for macro & risk teams. Compare 'then vs now', auto-recap decisions, and reduce re-research time."
+    "Turn past decisions into reusable judgment memory. Offline-first, on-prem. Your data never leaves your network."
 };
 
 export default function Page(){
