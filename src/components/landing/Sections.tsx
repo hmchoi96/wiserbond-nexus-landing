@@ -1,6 +1,7 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import FadeIn from "./FadeIn";
+import DeepModeShowcase from "./DeepModeShowcase";
 
 export default function Sections(){
   return (
@@ -60,6 +61,11 @@ export default function Sections(){
             </div>
           </div>
         </section>
+      </FadeIn>
+
+      {/* Deep Mode Showcase */}
+      <FadeIn>
+        <DeepModeShowcase />
       </FadeIn>
 
       {/* Who Section */}

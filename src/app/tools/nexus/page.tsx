@@ -4,6 +4,7 @@ import Footer from "@/components/site/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { canonicalFor } from "@/lib/url";
+import DeepModeShowcase from "@/components/landing/DeepModeShowcase";
 
 export const metadata: Metadata = {
   title: "Nexus - Akashic Record SLM for Macro Reasoning",
@@ -87,6 +88,8 @@ export default function NexusDetail(){
           </Card>
         </div>
         
+        <DeepModeShowcase />
+
         <div className="space-y-8">
           <h2 className="text-2xl font-semibold text-center">Architecture & Security</h2>
           <div className="grid md:grid-cols-2 gap-6">
