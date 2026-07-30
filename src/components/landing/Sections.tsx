@@ -16,11 +16,15 @@ function ProductShot({
   alt,
   caption,
   priority,
+  width,
+  height,
 }: {
   src: string;
   alt: string;
   caption: string;
   priority?: boolean;
+  width: number;
+  height: number;
 }) {
   return (
     <figure className="m-0">
@@ -28,8 +32,10 @@ function ProductShot({
         <Image
           src={src}
           alt={alt}
-          width={1600}
-          height={1000}
+          width={width}
+          height={height}
+          quality={95}
+          sizes="(max-width: 1024px) 94vw, 900px"
           priority={priority}
           className="w-full h-auto block"
         />
@@ -50,6 +56,8 @@ function FeatureRow({
   caption,
   flip,
   priority,
+  width,
+  height,
 }: {
   kicker: string;
   title: string;
@@ -59,6 +67,8 @@ function FeatureRow({
   caption: string;
   flip?: boolean;
   priority?: boolean;
+  width: number;
+  height: number;
 }) {
   const copy = (
     <div className="md:w-[38%] pt-1">
@@ -73,7 +83,14 @@ function FeatureRow({
   );
   const shot = (
     <div className="md:flex-1">
-      <ProductShot src={src} alt={alt} caption={caption} priority={priority} />
+      <ProductShot
+        src={src}
+        alt={alt}
+        caption={caption}
+        priority={priority}
+        width={width}
+        height={height}
+      />
     </div>
   );
 
@@ -151,6 +168,8 @@ export default function Sections() {
             alt="Akashic Record Deep Mode input with a filled decision scenario"
             caption="Input is the decision on the table, not a search query."
             priority
+            width={2838}
+            height={1576}
           />
           <FeatureRow
             flip
@@ -160,6 +179,8 @@ export default function Sections() {
             src="/product/deep-mode-04-result.png"
             alt="Akashic Record Deep Mode IC brief with applicable precedent"
             caption="IC Brief with applicable precedent and draft judgment."
+            width={2838}
+            height={4262}
           />
         </div>
       </FadeIn>
