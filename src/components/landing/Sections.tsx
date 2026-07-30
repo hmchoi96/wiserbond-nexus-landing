@@ -50,6 +50,7 @@ function FeatureRow({
   alt,
   caption,
   flip,
+  priority,
 }: {
   kicker: string;
   title: string;
@@ -58,6 +59,7 @@ function FeatureRow({
   alt: string;
   caption: string;
   flip?: boolean;
+  priority?: boolean;
 }) {
   const copy = (
     <div className="md:w-[38%] pt-1">
@@ -72,7 +74,7 @@ function FeatureRow({
   );
   const shot = (
     <div className="md:flex-1">
-      <ProductShot src={src} alt={alt} caption={caption} />
+      <ProductShot src={src} alt={alt} caption={caption} priority={priority} />
     </div>
   );
 
@@ -97,26 +99,15 @@ export default function Sections() {
   return (
     <div className="max-w-[960px] mx-auto px-4 md:px-7">
       <FadeIn>
-        <div className="pb-6">
-          <ProductShot
-            priority
-            src="/product/deep-mode-04-result.png"
-            alt="Akashic Record Deep Mode result with precedent and draft judgment"
-            caption="Deep Mode returns transferable precedents and a draft judgment for human review — not a chatbot answer."
-          />
-        </div>
-      </FadeIn>
-
-      <FadeIn>
         <section id="cjr" className="py-14 border-t border-[var(--border-soft)]">
           <SectionKicker>Core unit</SectionKicker>
           <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] tracking-tight mb-2.5">
-            CJR — how a judgment is remembered
+            CJR — how a decision is deconstructed
           </h2>
           <p className="text-sm md:text-[15px] text-[var(--text-secondary)] leading-relaxed max-w-xl mb-7">
-            Documents store what was said. Akashic Record stores what was judged — as
-            Condition, Judgment, and Reasoning — so similar situations can reuse the past
-            instead of starting over.
+            A decision is not one blob of text. Akashic Record breaks it into Condition,
+            Judgment, and Reasoning — so the structure can be stored, compared, and reused
+            when a similar situation returns.
           </p>
           <div className="grid sm:grid-cols-3 gap-4">
             {(
@@ -160,6 +151,7 @@ export default function Sections() {
             src="/product/deep-mode-02-filled.png"
             alt="Akashic Record Deep Mode input with a filled decision scenario"
             caption="Input is the decision on the table, not a search query."
+            priority
           />
           <FeatureRow
             flip
