@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { CALENDLY_URL } from "@/lib/config/calendly";
 
 export default function NexusHero() {
   return (
@@ -23,14 +23,19 @@ export default function NexusHero() {
             <br />
             On-prem, offline-first. Your data never leaves your network.
           </p>
-          <Link href="/waitlist" className="inline-flex">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex"
+          >
             <Button
               className="h-11 px-7 text-sm font-semibold hover:bg-[var(--brand-hover)]"
               style={{ background: "var(--brand)" }}
             >
               Request a 15-min Interview
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </header>

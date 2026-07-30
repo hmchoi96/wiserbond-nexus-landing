@@ -1,8 +1,7 @@
-"use client";
 import Image from "next/image";
-import Link from "next/link";
 import FadeIn from "./FadeIn";
 import ArchitectureMindmap from "./ArchitectureMindmap";
+import { CALENDLY_URL } from "@/lib/config/calendly";
 
 function SectionKicker({ children }: { children: string }) {
   return (
@@ -175,7 +174,7 @@ export default function Sections() {
             Documents enter as candidates. Humans confirm. CJR is the reusable unit —
             searched, compared, and improved over time.
           </p>
-          <div className="rounded border border-[var(--border)] bg-[var(--page-bg)] p-2 overflow-x-auto">
+          <div className="rounded border border-[var(--border)] bg-[var(--page-bg)] overflow-hidden">
             <ArchitectureMindmap />
           </div>
           <div className="flex flex-wrap gap-8 md:gap-10 mt-7">
@@ -206,13 +205,15 @@ export default function Sections() {
           <p className="text-sm md:text-[15px] text-[var(--text-secondary)] mb-6">
             Fifteen minutes. No pitch deck — questions about how you preserve decisions.
           </p>
-          <Link
-            href="/waitlist"
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex px-6 py-3 rounded-md text-white text-sm font-semibold transition-colors hover:bg-[var(--brand-hover)]"
             style={{ background: "var(--brand)" }}
           >
             Request a 15-min Interview
-          </Link>
+          </a>
         </section>
       </FadeIn>
     </div>

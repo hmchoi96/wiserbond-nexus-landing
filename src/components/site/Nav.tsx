@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { motion, useScroll } from "framer-motion";
 import { nav } from "@/lib/config/site";
+import { CALENDLY_URL } from "@/lib/config/calendly";
 
 export default function Nav() {
   const { scrollYProgress } = useScroll();
@@ -14,17 +15,23 @@ export default function Nav() {
         </Link>
         <div className="hidden md:flex items-center gap-6 text-sm text-[var(--text-secondary)]">
           {nav.map((n) => (
-            <Link key={n.label} href={n.href} className="hover:text-[var(--brand)] transition-colors">
+            <Link
+              key={n.label}
+              href={n.href}
+              className="hover:text-[var(--brand)] transition-colors"
+            >
               {n.label}
             </Link>
           ))}
-          <Link
-            href="/waitlist"
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white text-sm font-semibold px-3.5 py-2 rounded-md hover:bg-[var(--brand-hover)] transition-colors"
             style={{ background: "var(--brand)" }}
           >
             Request interview
-          </Link>
+          </a>
         </div>
       </div>
       <motion.div
