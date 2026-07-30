@@ -5,10 +5,10 @@ export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
     default: SITE.defaultTitle,
-    template: "%s | Wiserbond Nexus",
+    template: "%s | Wiserbond",
   },
   description: SITE.defaultDescription,
-  applicationName: "Wiserbond Nexus",
+  applicationName: "Wiserbond Akashic Record",
   keywords: SEO_KEYWORDS,
   openGraph: {
     type: "website",
@@ -21,7 +21,7 @@ export const defaultMetadata: Metadata = {
         url: SITE.ogImage, 
         width: 1200, 
         height: 630, 
-        alt: "Wiserbond Nexus - On-prem Judgment Memory for Macro & Risk Teams" 
+        alt: "Wiserbond Akashic Record — Judgment Memory System" 
       }
     ],
     locale: SITE.locale,

@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-white to-[#F6F8FF] text-slate-900`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[var(--page-bg)] text-[var(--text)]`}
       >
         <GoogleAnalytics />
         <Providers>{children}</Providers>

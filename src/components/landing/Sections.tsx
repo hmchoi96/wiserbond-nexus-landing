@@ -1,104 +1,228 @@
 "use client";
-import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
 import FadeIn from "./FadeIn";
-import DeepModeShowcase from "./DeepModeShowcase";
+import ArchitectureMindmap from "./ArchitectureMindmap";
 
-export default function Sections(){
+function SectionKicker({ children }: { children: string }) {
   return (
-    <>
-      {/* Problem Section */}
+    <div className="text-[11px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)] mb-2.5">
+      {children}
+    </div>
+  );
+}
+
+function ProductShot({
+  src,
+  alt,
+  caption,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  priority?: boolean;
+}) {
+  return (
+    <figure className="m-0">
+      <div className="relative overflow-hidden rounded border border-[var(--border)] bg-[var(--surface-muted)]">
+        <Image
+          src={src}
+          alt={alt}
+          width={1600}
+          height={1000}
+          priority={priority}
+          className="w-full h-auto block"
+        />
+      </div>
+      <figcaption className="mt-3 text-sm text-[var(--text-secondary)] leading-snug max-w-xl">
+        {caption}
+      </figcaption>
+    </figure>
+  );
+}
+
+function FeatureRow({
+  kicker,
+  title,
+  body,
+  src,
+  alt,
+  caption,
+  flip,
+}: {
+  kicker: string;
+  title: string;
+  body: string;
+  src: string;
+  alt: string;
+  caption: string;
+  flip?: boolean;
+}) {
+  const copy = (
+    <div className="md:w-[38%] pt-1">
+      <SectionKicker>{kicker}</SectionKicker>
+      <h2 className="font-serif text-2xl md:text-[26px] font-medium text-[var(--brand)] tracking-tight leading-snug mb-3">
+        {title}
+      </h2>
+      <p className="text-sm md:text-[15px] leading-relaxed text-[var(--text-secondary)] m-0">
+        {body}
+      </p>
+    </div>
+  );
+  const shot = (
+    <div className="md:flex-1">
+      <ProductShot src={src} alt={alt} caption={caption} />
+    </div>
+  );
+
+  return (
+    <section className="flex flex-col md:flex-row gap-10 md:gap-12 items-start py-14 border-t border-[var(--border-soft)]">
+      {flip ? (
+        <>
+          {shot}
+          {copy}
+        </>
+      ) : (
+        <>
+          {copy}
+          {shot}
+        </>
+      )}
+    </section>
+  );
+}
+
+export default function Sections() {
+  return (
+    <div className="max-w-[960px] mx-auto px-4 md:px-7">
       <FadeIn>
-        <section id="problem" className="max-w-4xl mx-auto px-4 py-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-semibold">The Problem</h2>
-            <div className="space-y-4 text-lg text-muted-foreground">
-              <p>
-                <strong className="text-foreground">Corporate Amnesia:</strong> The &ldquo;why&rdquo; behind decisions gets buried in documents and disappears when people leave.
-              </p>
-              <p>
-                Teams waste hours re-researching context that already exists somewhere, scattered across emails, notes, and forgotten files.
-              </p>
-            </div>
+        <div className="pb-6">
+          <ProductShot
+            priority
+            src="/product/deep-mode-04-result.png"
+            alt="Akashic Record Deep Mode result with precedent and draft judgment"
+            caption="Deep Mode returns transferable precedents and a draft judgment for human review — not a chatbot answer."
+          />
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <section id="cjr" className="py-14 border-t border-[var(--border-soft)]">
+          <SectionKicker>Core unit</SectionKicker>
+          <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] tracking-tight mb-2.5">
+            CJR — how a judgment is remembered
+          </h2>
+          <p className="text-sm md:text-[15px] text-[var(--text-secondary)] leading-relaxed max-w-xl mb-7">
+            Documents store what was said. Akashic Record stores what was judged — as
+            Condition, Judgment, and Reasoning — so similar situations can reuse the past
+            instead of starting over.
+          </p>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {(
+              [
+                [
+                  "C · Condition",
+                  "The situation you observed — constraints, signals, and assumptions at the time.",
+                ],
+                [
+                  "J · Judgment",
+                  "The call you made under those conditions — what to do, defer, or refuse.",
+                ],
+                [
+                  "R · Reasoning",
+                  "Why that judgment followed — the logic you would reuse or revise later.",
+                ],
+              ] as const
+            ).map(([title, body]) => (
+              <div
+                key={title}
+                className="rounded border border-[var(--border)] bg-[var(--surface)] p-4"
+              >
+                <div className="text-xs font-bold tracking-wide text-[var(--brand)] mb-2">
+                  {title}
+                </div>
+                <p className="text-[13px] leading-relaxed text-[var(--text-secondary)] m-0">
+                  {body}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
       </FadeIn>
 
-      {/* Solution Section */}
       <FadeIn>
-        <section id="solution" className="bg-white py-16">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="text-center space-y-6 mb-10">
-              <h2 className="text-2xl md:text-3xl font-semibold">Our Approach</h2>
-            </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="rounded-2xl border border-black/5 shadow-sm p-6 text-center">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="text-3xl mb-2">📋</div>
-                  <h3 className="font-semibold">CJR Structuring</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Convert past decisions into structured, searchable judgment records (Context-Judgment-Reasoning).
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="rounded-2xl border border-black/5 shadow-sm p-6 text-center">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="text-3xl mb-2">🧭</div>
-                  <h3 className="font-semibold">Decision Navigation</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Ask a question, get relevant past cases and a structured decision framework. Not more raw documents.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="rounded-2xl border border-black/5 shadow-sm p-6 text-center">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="text-3xl mb-2">🔒</div>
-                  <h3 className="font-semibold">Offline-First</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Runs locally on your machine. Your judgment data never leaves your network. Full data sovereignty.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+        <div id="product">
+          <FeatureRow
+            kicker="Capture"
+            title="Structure the decision before the debate"
+            body="Decision context, conditions, evidence, and initial reasoning become a CJR candidate — Condition, Judgment, Reasoning."
+            src="/product/deep-mode-02-filled.png"
+            alt="Akashic Record Deep Mode input with a filled decision scenario"
+            caption="Input is the decision on the table, not a search query."
+          />
+          <FeatureRow
+            flip
+            kicker="Reuse"
+            title="Past judgment is a starting point"
+            body="Material differences, conflicting evidence, and a draft for humans to confirm. AI proposes; people decide what becomes memory."
+            src="/product/deep-mode-04-result.png"
+            alt="Akashic Record Deep Mode IC brief with applicable precedent"
+            caption="IC Brief with applicable precedent and draft judgment."
+          />
+        </div>
+      </FadeIn>
+
+      <FadeIn>
+        <section id="architecture" className="py-14 border-t border-[var(--border-soft)]">
+          <SectionKicker>Architecture</SectionKicker>
+          <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] tracking-tight mb-2.5">
+            This is our architecture
+          </h2>
+          <p className="text-sm md:text-[15px] text-[var(--text-secondary)] leading-relaxed max-w-xl mb-7">
+            Documents enter as candidates. Humans confirm. CJR is the reusable unit —
+            searched, compared, and improved over time.
+          </p>
+          <div className="rounded border border-[var(--border)] bg-[var(--page-bg)] p-2 overflow-x-auto">
+            <ArchitectureMindmap />
+          </div>
+          <div className="flex flex-wrap gap-8 md:gap-10 mt-7">
+            {(
+              [
+                ["AI proposes", "never writes truth alone"],
+                ["Human confirms", "Inbox → confirmed CJR"],
+                ["Memory compounds", "reuse beats re-debate"],
+              ] as const
+            ).map(([t, d]) => (
+              <div key={t} className="min-w-[160px]">
+                <div className="text-sm font-semibold text-[var(--brand)]">{t}</div>
+                <div className="text-xs text-[var(--text-muted)] mt-1">{d}</div>
+              </div>
+            ))}
           </div>
         </section>
       </FadeIn>
 
-      {/* Deep Mode Showcase */}
       <FadeIn>
-        <DeepModeShowcase />
-      </FadeIn>
-
-      {/* Who Section */}
-      <FadeIn>
-        <section id="for" className="max-w-4xl mx-auto px-4 py-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-semibold">Built For</h2>
-            <p className="text-lg text-muted-foreground">
-              Investment teams, strategy groups, and risk committees who need to preserve and reuse judgment, not just store documents.
-            </p>
-          </div>
+        <section
+          id="contact"
+          className="py-16 md:py-20 border-t border-[var(--border-soft)] text-center"
+        >
+          <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] mb-3">
+            Pilot with your team
+          </h2>
+          <p className="text-sm md:text-[15px] text-[var(--text-secondary)] mb-6">
+            Fifteen minutes. No pitch deck — questions about how you preserve decisions.
+          </p>
+          <Link
+            href="/waitlist"
+            className="inline-flex px-6 py-3 rounded-md text-white text-sm font-semibold transition-colors hover:bg-[var(--brand-hover)]"
+            style={{ background: "var(--brand)" }}
+          >
+            Request a 15-min Interview
+          </Link>
         </section>
       </FadeIn>
-
-      {/* CTA Reminder Section */}
-      <FadeIn>
-        <section id="contact" className="bg-slate-50 py-16">
-          <div className="max-w-2xl mx-auto px-4 text-center space-y-6">
-            <h2 className="text-2xl font-semibold">Interested?</h2>
-            <p className="text-muted-foreground">
-              We&apos;re looking for teams who want to pilot judgment memory in their workflow.<br />
-              15-minute conversation. No pitch deck, just questions.
-            </p>
-            <a 
-              href="/waitlist" 
-              className="inline-flex px-6 py-3 rounded-lg text-white font-medium transition-colors"
-              style={{ background: "var(--brand)" }}
-            >
-              Request a 15-min Interview
-            </a>
-          </div>
-        </section>
-      </FadeIn>
-    </>
+    </div>
   );
 }
