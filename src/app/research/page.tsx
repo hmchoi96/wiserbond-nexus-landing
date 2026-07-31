@@ -22,7 +22,7 @@ const articles = [
     href: "/research/judgment-memory-framework",
     title: "Wiserbond Judgment Memory Framework v1",
     blurb:
-      "Eight elements: Condition, Judgment, Reasoning, Evidence, Outcome, Transferability, Provenance, Supersession.",
+      "Eight elements: Condition, Judgment, Reasoning, Evidence, Outcome, Transferability, Provenance, Supersession. PDF available.",
   },
   {
     href: "/research/precedent-transferability",

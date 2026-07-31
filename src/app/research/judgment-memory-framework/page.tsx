@@ -41,7 +41,8 @@ export default function Page() {
       </p>
       <p>
         Use it with notes, memos, or software. No product required to apply the
-        structure.
+        structure.{" "}
+        <a href="/research/judgment-memory-framework-v1.pdf">Download PDF</a>.
       </p>
 
       <h2>The eight elements</h2>
