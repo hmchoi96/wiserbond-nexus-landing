@@ -13,6 +13,9 @@ export default function Footer() {
           <a href="/research" className="hover:text-[var(--brand)]">
             Research
           </a>
+          <a href="/evidence-room" className="hover:text-[var(--brand)]">
+            Evidence
+          </a>
           <a href="/pilot" className="hover:text-[var(--brand)]">
             Pilot
           </a>

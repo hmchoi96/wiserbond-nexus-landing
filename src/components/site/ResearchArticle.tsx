@@ -15,6 +15,7 @@ type Props = {
   dateModified: string;
   breadcrumbs: Breadcrumb[];
   children: ReactNode;
+  kicker?: string;
 };
 
 export function researchArticleJsonLd({
@@ -85,6 +86,7 @@ export default function ResearchArticle({
   dateModified,
   breadcrumbs,
   children,
+  kicker = "Research",
 }: Props) {
   const articleLd = researchArticleJsonLd({
     title,
@@ -119,7 +121,7 @@ export default function ResearchArticle({
 
         <header className="mb-10 space-y-4">
           <p className="text-[13px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)]">
-            Research
+            {kicker}
           </p>
           <h1 className="font-serif text-3xl md:text-[2.5rem] font-medium tracking-tight text-[var(--brand)] leading-[1.15]">
             {title}

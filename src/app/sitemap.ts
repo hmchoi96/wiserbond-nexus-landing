@@ -10,6 +10,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/research/decision-archive-vs-judgment-memory',
     '/research/how-investment-judgments-become-outdated',
   ]
+  const evidence = [
+    '/evidence-room',
+    '/evidence-room/hays-producer-lift-out',
+  ]
 
   return [
     {
@@ -41,6 +45,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: path === '/research/judgment-memory-framework' || path === '/research/what-is-judgment-memory' ? 0.9 : 0.8,
+    })),
+    ...evidence.map((path) => ({
+      url: `${baseUrl}${path}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: path === '/evidence-room/hays-producer-lift-out' ? 0.9 : 0.8,
     })),
   ]
 }
