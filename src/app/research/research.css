@@ -1,0 +1,45 @@
+.research-prose h2 {
+  font-family: var(--font-serif, ui-serif, Georgia, serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.research-prose h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.research-prose p {
+  margin: 0;
+}
+
+.research-prose ul,
+.research-prose ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.research-prose li {
+  padding-left: 0.15rem;
+}
+
+.research-prose strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.research-prose a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

@@ -2,6 +2,14 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.wiserbond.com'
+  const research = [
+    '/research',
+    '/research/what-is-judgment-memory',
+    '/research/judgment-memory-framework',
+    '/research/precedent-transferability',
+    '/research/decision-archive-vs-judgment-memory',
+    '/research/how-investment-judgments-become-outdated',
+  ]
 
   return [
     {
@@ -11,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/pricing`,
+      url: `${baseUrl}/pilot`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -20,19 +28,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/demo`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.6,
     },
     {
       url: `${baseUrl}/waitlist`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.6,
     },
-    {
-      url: `${baseUrl}/tools/nexus`,
+    ...research.map((path) => ({
+      url: `${baseUrl}${path}`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+      changeFrequency: 'monthly' as const,
+      priority: path === '/research/judgment-memory-framework' || path === '/research/what-is-judgment-memory' ? 0.9 : 0.8,
+    })),
   ]
 }

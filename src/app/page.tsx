@@ -3,6 +3,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import NexusHero from "@/components/landing/NexusHero";
 import Sections from "@/components/landing/Sections";
+import { BRAND } from "@/lib/site";
 import { canonicalFor } from "@/lib/url";
 
 export const metadata: Metadata = {
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD 구조화 데이터
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Wiserbond",
   url: "https://www.wiserbond.com",
   logo: "https://www.wiserbond.com/og/wiserbond-logo.png",
-  sameAs: ["https://www.linkedin.com/company/wiserbond"]
+  description: BRAND.company,
+  sameAs: ["https://www.linkedin.com/company/wiserbond"],
 };
 
 const softwareApplicationSchema = {
@@ -42,14 +43,14 @@ const softwareApplicationSchema = {
     "@type": "Offer",
     category: "Pilot",
     description: "15-min interview for pilot teams",
+    url: "https://www.wiserbond.com/pilot",
   },
   provider: {
     "@type": "Organization",
     name: "Wiserbond",
     url: "https://www.wiserbond.com",
   },
-  description:
-    "Turn past decisions into reusable judgment memory. Offline-first, on-prem. Your data never leaves your network.",
+  description: `${BRAND.product} Offline-first, on-prem.`,
 };
 
 export default function Page(){
