@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { BRAND } from "@/lib/site";
 import { canonicalFor } from "@/lib/url";
 
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Definitions and frameworks for judgment memory in private equity — from Wiserbond, the team behind Akashic Record.",
+    "Definitions and frameworks for judgment memory in private equity, from Wiserbond.",
   alternates: { canonical: canonicalFor("/research") },
 };
 
@@ -17,31 +16,31 @@ const articles = [
     href: "/research/what-is-judgment-memory",
     title: "What Is Judgment Memory for Private Equity?",
     blurb:
-      "A clear definition of judgment memory: preserving conditions, judgment, reasoning, evidence, and outcomes so precedents can be reused.",
+      "Definition: conditions, judgment, reasoning, evidence, and outcomes — retrieved when similar conditions recur.",
   },
   {
     href: "/research/judgment-memory-framework",
     title: "Wiserbond Judgment Memory Framework v1",
     blurb:
-      "The public framework: Condition, Judgment, Reasoning, Evidence, Outcome, Transferability, Provenance, and Supersession.",
+      "Eight elements: Condition, Judgment, Reasoning, Evidence, Outcome, Transferability, Provenance, Supersession.",
   },
   {
     href: "/research/precedent-transferability",
     title: "What Is Precedent Transferability?",
     blurb:
-      "How to evaluate whether a past investment judgment still applies under current deal conditions.",
+      "Test whether a past investment judgment still applies under current deal conditions.",
   },
   {
     href: "/research/decision-archive-vs-judgment-memory",
     title: "Decision Archive versus Judgment Memory",
     blurb:
-      "Why storing documents is not the same as preserving reusable investment judgment.",
+      "Keeping files is not the same as keeping reusable decision reasoning.",
   },
   {
     href: "/research/how-investment-judgments-become-outdated",
     title: "How Investment Judgments Become Outdated",
     blurb:
-      "Condition drift and judgment supersession — when historical precedents should no longer be reused.",
+      "Condition drift and supersession — when a historical precedent should stop being reused.",
   },
 ];
 
@@ -58,8 +57,8 @@ export default function ResearchIndex() {
             Judgment memory research
           </h1>
           <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-            {BRAND.companyProduct} These pages define the concepts behind the
-            product so they can be cited independently of any demo.
+            Wiserbond builds Akashic Record. These pages define the concepts so
+            they can be cited without a demo.
           </p>
         </header>
 

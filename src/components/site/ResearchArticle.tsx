@@ -136,7 +136,7 @@ export default function ResearchArticle({
 
         <aside className="mt-14 pt-8 border-t border-[var(--border-soft)] space-y-4">
           <p className="text-[15px] text-[var(--text-secondary)] leading-relaxed">
-            {BRAND.product} {BRAND.does}
+            {BRAND.product} {BRAND.doesNot}
           </p>
           <a
             href={CALENDLY_URL}

@@ -5,7 +5,7 @@ import { canonicalFor } from "@/lib/url";
 
 const title = "Decision Archive versus Judgment Memory";
 const description =
-  "A decision archive stores final documents and files. Judgment memory preserves the conditions, judgment, reasoning, evidence, and outcomes behind those decisions so teams can retrieve transferable precedents — not just search filenames.";
+  "A decision archive stores final documents and files. Judgment memory keeps the conditions, judgment, reasoning, evidence, and outcomes behind those decisions so teams can retrieve transferable precedents — not just filenames.";
 const path = "/research/decision-archive-vs-judgment-memory";
 const datePublished = "2026-07-31";
 const dateModified = "2026-07-31";
@@ -44,40 +44,38 @@ export default function Page() {
         <li>Email threads and shared drives</li>
       </ul>
       <p>
-        Traditional deal archives usually preserve final documents, but they
-        do not consistently preserve which conditions caused the investment
-        committee to accept or reject a specific risk.
+        Final documents stay. Which conditions made the IC accept or reject a
+        specific risk usually do not.
       </p>
 
-      <h2>What judgment memory adds</h2>
+      <h2>What judgment memory keeps</h2>
       <ul>
-        <li>Structured conditions observed at the time</li>
-        <li>The judgment made — including decisions to pass</li>
+        <li>Conditions observed at the time</li>
+        <li>The judgment — including passes</li>
         <li>Reasoning tied to those conditions</li>
         <li>Evidence linked to the reasoning</li>
-        <li>Outcomes connected back to the original judgment</li>
+        <li>Outcomes linked back to the judgment</li>
         <li>Transferability notes for later reuse</li>
       </ul>
 
-      <h2>Why the difference matters when people leave</h2>
+      <h2>When people leave</h2>
       <p>
-        When an investment professional leaves, the archive often remains
-        searchable while the judgment context disappears. Colleagues can find
-        the memo but not reconstruct which assumptions were load-bearing, which
-        risks were consciously accepted, or when that logic should no longer
-        apply.
+        The archive still searches. The judgment context often does not.
+        Colleagues find the memo. They cannot reconstruct which assumptions
+        carried the weight, which risks were accepted on purpose, or when that
+        logic should stop applying.
       </p>
 
       <h2>Document search vs judgment retrieval</h2>
+      <p>Document search asks where the file is.</p>
       <p>
-        Document search answers &ldquo;where is the file?&rdquo; Judgment
-        retrieval answers &ldquo;when have we faced comparable conditions, what
-        did we decide, what happened, and what still holds?&rdquo;
+        Judgment retrieval asks when the firm faced comparable conditions, what
+        it decided, what happened, and what still holds.
       </p>
 
-      <h2>Product note</h2>
+      <h2>About Akashic Record</h2>
       <p>
-        {BRAND.product} {BRAND.does} {BRAND.doesNot}
+        {BRAND.product} {BRAND.doesNot}
       </p>
     </ResearchArticle>
   );
