@@ -1,6 +1,7 @@
 import Image from "next/image";
 import FadeIn from "./FadeIn";
 import ArchitectureMindmap from "./ArchitectureMindmap";
+import ReuseWalkthrough from "./ReuseWalkthrough";
 import { CALENDLY_URL } from "@/lib/config/calendly";
 
 function SectionKicker({ children }: { children: string }) {
@@ -158,8 +159,8 @@ export default function Sections() {
         </section>
       </FadeIn>
 
-      <FadeIn>
-        <div id="product">
+      <div id="product">
+        <FadeIn>
           <FeatureRow
             kicker="Capture"
             title="Structure the decision before the debate"
@@ -171,19 +172,9 @@ export default function Sections() {
             width={2838}
             height={1576}
           />
-          <FeatureRow
-            flip
-            kicker="Reuse"
-            title="Past judgment is a starting point"
-            body="Material differences, conflicting evidence, and a draft for humans to confirm. AI proposes; people decide what becomes memory."
-            src="/product/deep-mode-04-result.png"
-            alt="Akashic Record Deep Mode IC brief with applicable precedent"
-            caption="IC Brief with applicable precedent and draft judgment."
-            width={2838}
-            height={4262}
-          />
-        </div>
-      </FadeIn>
+        </FadeIn>
+        <ReuseWalkthrough />
+      </div>
 
       <FadeIn>
         <section id="architecture" className="py-16 md:py-20 border-t border-[var(--border-soft)]">
