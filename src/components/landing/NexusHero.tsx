@@ -6,19 +6,19 @@ import { CALENDLY_URL } from "@/lib/config/calendly";
 export default function NexusHero() {
   return (
     <header className="relative overflow-hidden">
-      <div className="max-w-[960px] mx-auto px-4 md:px-7 pt-16 pb-10 md:pt-24 md:pb-14 text-center">
+      <div className="max-w-[1120px] mx-auto px-5 md:px-10 pt-20 pb-12 md:pt-28 md:pb-16 text-center">
         <motion.div
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
         >
-          <div className="text-[12px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)] mb-5">
+          <div className="text-[13px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)] mb-6">
             Akashic Record
           </div>
-          <h1 className="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-5 text-[var(--brand)] leading-[1.15]">
+          <h1 className="font-serif text-4xl md:text-[56px] font-medium tracking-tight mb-6 text-[var(--brand)] leading-[1.12]">
             Turn past decisions into reusable judgment memory
           </h1>
-          <p className="text-base md:text-lg text-[var(--text-secondary)] max-w-lg mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-9 leading-relaxed">
             Past Self Advises Present Self.
             <br />
             On-prem, offline-first. Your data never leaves your network.
@@ -30,7 +30,7 @@ export default function NexusHero() {
             className="inline-flex"
           >
             <Button
-              className="h-11 px-7 text-sm font-semibold hover:bg-[var(--brand-hover)]"
+              className="h-12 px-8 text-base font-semibold hover:bg-[var(--brand-hover)]"
               style={{ background: "var(--brand)" }}
             >
               Request a 15-min Interview

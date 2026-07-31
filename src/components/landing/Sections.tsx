@@ -5,7 +5,7 @@ import { CALENDLY_URL } from "@/lib/config/calendly";
 
 function SectionKicker({ children }: { children: string }) {
   return (
-    <div className="text-[11px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)] mb-2.5">
+    <div className="text-xs md:text-[13px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)] mb-3">
       {children}
     </div>
   );
@@ -35,12 +35,12 @@ function ProductShot({
           width={width}
           height={height}
           quality={95}
-          sizes="(max-width: 1024px) 94vw, 900px"
+          sizes="(max-width: 1200px) 94vw, 1100px"
           priority={priority}
           className="w-full h-auto block"
         />
       </div>
-      <figcaption className="mt-3 text-sm text-[var(--text-secondary)] leading-snug max-w-xl">
+      <figcaption className="mt-3.5 text-[15px] text-[var(--text-secondary)] leading-snug max-w-2xl">
         {caption}
       </figcaption>
     </figure>
@@ -71,12 +71,12 @@ function FeatureRow({
   height: number;
 }) {
   const copy = (
-    <div className="md:w-[38%] pt-1">
+    <div className="md:w-[36%] pt-1">
       <SectionKicker>{kicker}</SectionKicker>
-      <h2 className="font-serif text-2xl md:text-[26px] font-medium text-[var(--brand)] tracking-tight leading-snug mb-3">
+      <h2 className="font-serif text-[28px] md:text-[34px] font-medium text-[var(--brand)] tracking-tight leading-snug mb-4">
         {title}
       </h2>
-      <p className="text-sm md:text-[15px] leading-relaxed text-[var(--text-secondary)] m-0">
+      <p className="text-base md:text-lg leading-relaxed text-[var(--text-secondary)] m-0">
         {body}
       </p>
     </div>
@@ -95,7 +95,7 @@ function FeatureRow({
   );
 
   return (
-    <section className="flex flex-col md:flex-row gap-10 md:gap-12 items-start py-14 border-t border-[var(--border-soft)]">
+    <section className="flex flex-col md:flex-row gap-10 md:gap-14 items-start py-16 md:py-20 border-t border-[var(--border-soft)]">
       {flip ? (
         <>
           {shot}
@@ -113,19 +113,19 @@ function FeatureRow({
 
 export default function Sections() {
   return (
-    <div className="max-w-[960px] mx-auto px-4 md:px-7">
+    <div className="max-w-[1120px] mx-auto px-5 md:px-10">
       <FadeIn>
-        <section id="cjr" className="py-14 border-t border-[var(--border-soft)]">
+        <section id="cjr" className="py-16 md:py-20 border-t border-[var(--border-soft)]">
           <SectionKicker>Core unit</SectionKicker>
-          <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] tracking-tight mb-2.5">
+          <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-[var(--brand)] tracking-tight mb-3">
             CJR — how a decision is deconstructed
           </h2>
-          <p className="text-sm md:text-[15px] text-[var(--text-secondary)] leading-relaxed max-w-xl mb-7">
+          <p className="text-base md:text-lg text-[var(--text-secondary)] leading-relaxed max-w-3xl mb-8">
             A decision is not one blob of text. Akashic Record breaks it into Condition,
             Judgment, and Reasoning — so the structure can be stored, compared, and reused
             when a similar situation returns.
           </p>
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-3 gap-5">
             {(
               [
                 [
@@ -144,12 +144,12 @@ export default function Sections() {
             ).map(([title, body]) => (
               <div
                 key={title}
-                className="rounded border border-[var(--border)] bg-[var(--surface)] p-4"
+                className="rounded border border-[var(--border)] bg-[var(--surface)] p-5 md:p-6"
               >
-                <div className="text-xs font-bold tracking-wide text-[var(--brand)] mb-2">
+                <div className="text-sm font-bold tracking-wide text-[var(--brand)] mb-2.5">
                   {title}
                 </div>
-                <p className="text-[13px] leading-relaxed text-[var(--text-secondary)] m-0">
+                <p className="text-[15px] md:text-base leading-relaxed text-[var(--text-secondary)] m-0">
                   {body}
                 </p>
               </div>
@@ -186,19 +186,19 @@ export default function Sections() {
       </FadeIn>
 
       <FadeIn>
-        <section id="architecture" className="py-14 border-t border-[var(--border-soft)]">
+        <section id="architecture" className="py-16 md:py-20 border-t border-[var(--border-soft)]">
           <SectionKicker>Architecture</SectionKicker>
-          <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] tracking-tight mb-2.5">
+          <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-[var(--brand)] tracking-tight mb-3">
             This is our architecture
           </h2>
-          <p className="text-sm md:text-[15px] text-[var(--text-secondary)] leading-relaxed max-w-xl mb-7">
+          <p className="text-base md:text-lg text-[var(--text-secondary)] leading-relaxed max-w-3xl mb-8">
             Documents enter as candidates. Humans confirm. CJR is the reusable unit —
             searched, compared, and improved over time.
           </p>
           <div className="rounded border border-[var(--border)] bg-[var(--page-bg)] overflow-hidden">
             <ArchitectureMindmap />
           </div>
-          <div className="flex flex-wrap gap-8 md:gap-10 mt-7">
+          <div className="flex flex-wrap gap-10 md:gap-14 mt-8">
             {(
               [
                 ["AI proposes", "never writes truth alone"],
@@ -206,9 +206,9 @@ export default function Sections() {
                 ["Memory compounds", "reuse beats re-debate"],
               ] as const
             ).map(([t, d]) => (
-              <div key={t} className="min-w-[160px]">
-                <div className="text-sm font-semibold text-[var(--brand)]">{t}</div>
-                <div className="text-xs text-[var(--text-muted)] mt-1">{d}</div>
+              <div key={t} className="min-w-[180px]">
+                <div className="text-base font-semibold text-[var(--brand)]">{t}</div>
+                <div className="text-sm text-[var(--text-muted)] mt-1.5">{d}</div>
               </div>
             ))}
           </div>
@@ -218,19 +218,19 @@ export default function Sections() {
       <FadeIn>
         <section
           id="contact"
-          className="py-16 md:py-20 border-t border-[var(--border-soft)] text-center"
+          className="py-20 md:py-24 border-t border-[var(--border-soft)] text-center"
         >
-          <h2 className="font-serif text-2xl md:text-[28px] font-medium text-[var(--brand)] mb-3">
+          <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-[var(--brand)] mb-4">
             Pilot with your team
           </h2>
-          <p className="text-sm md:text-[15px] text-[var(--text-secondary)] mb-6">
+          <p className="text-base md:text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
             Fifteen minutes. No pitch deck — questions about how you preserve decisions.
           </p>
           <a
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex px-6 py-3 rounded-md text-white text-sm font-semibold transition-colors hover:bg-[var(--brand-hover)]"
+            className="inline-flex px-7 py-3.5 rounded-md text-white text-base font-semibold transition-colors hover:bg-[var(--brand-hover)]"
             style={{ background: "var(--brand)" }}
           >
             Request a 15-min Interview
