@@ -100,10 +100,10 @@ export default function ResearchArticle({
   return (
     <>
       <Nav />
-      <main className="max-w-[720px] mx-auto px-5 md:px-10 py-14 md:py-20">
+      <main className="max-w-[920px] mx-auto px-5 md:px-10 py-14 md:py-20">
         <nav
           aria-label="Breadcrumb"
-          className="text-sm text-[var(--text-muted)] mb-8 flex flex-wrap gap-1.5"
+          className="text-[15px] text-[var(--text-muted)] mb-8 flex flex-wrap gap-1.5"
         >
           {breadcrumbs.map((item, i) => (
             <span key={item.href} className="inline-flex items-center gap-1.5">
@@ -120,31 +120,31 @@ export default function ResearchArticle({
         </nav>
 
         <header className="mb-10 space-y-4">
-          <p className="text-[13px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)]">
+          <p className="text-sm font-medium tracking-[0.08em] uppercase text-[var(--text-muted)]">
             {kicker}
           </p>
-          <h1 className="font-serif text-3xl md:text-[2.5rem] font-medium tracking-tight text-[var(--brand)] leading-[1.15]">
+          <h1 className="font-serif text-[2rem] md:text-[2.75rem] font-medium tracking-tight text-[var(--brand)] leading-[1.15]">
             {title}
           </h1>
-          <p className="text-sm text-[var(--text-muted)]">
+          <p className="text-[15px] text-[var(--text-muted)]">
             By {BRAND.author.name} · Updated{" "}
             <time dateTime={dateModified}>{dateModified}</time>
           </p>
         </header>
 
-        <article className="research-prose space-y-8 text-[17px] leading-relaxed text-[var(--text-secondary)]">
+        <article className="research-prose space-y-8 text-[19px] leading-[1.75] text-[var(--text-secondary)]">
           {children}
         </article>
 
         <aside className="mt-14 pt-8 border-t border-[var(--border-soft)] space-y-4">
-          <p className="text-[15px] text-[var(--text-secondary)] leading-relaxed">
+          <p className="text-base text-[var(--text-secondary)] leading-relaxed">
             {BRAND.product} {BRAND.doesNot}
           </p>
           <a
             href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 px-6 items-center justify-center rounded-md text-[15px] font-semibold text-white hover:bg-[var(--brand-hover)] transition-colors"
+            className="inline-flex h-11 px-6 items-center justify-center rounded-md text-base font-semibold text-white hover:bg-[var(--brand-hover)] transition-colors"
             style={{ background: "var(--brand)" }}
           >
             Request a 15-min Interview

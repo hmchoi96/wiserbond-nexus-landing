@@ -48,15 +48,15 @@ export default function ResearchIndex() {
   return (
     <>
       <Nav />
-      <main className="max-w-[720px] mx-auto px-5 md:px-10 py-14 md:py-20 space-y-10">
+      <main className="max-w-[920px] mx-auto px-5 md:px-10 py-14 md:py-20 space-y-10">
         <header className="space-y-4">
-          <p className="text-[13px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)]">
+          <p className="text-sm font-medium tracking-[0.08em] uppercase text-[var(--text-muted)]">
             Research
           </p>
-          <h1 className="font-serif text-3xl md:text-4xl font-medium tracking-tight text-[var(--brand)]">
+          <h1 className="font-serif text-[2rem] md:text-[2.75rem] font-medium tracking-tight text-[var(--brand)]">
             Judgment memory research
           </h1>
-          <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
+          <p className="text-xl text-[var(--text-secondary)] leading-relaxed">
             Wiserbond builds Akashic Record. These pages define the concepts so
             they can be cited without a demo.
           </p>
@@ -69,10 +69,10 @@ export default function ResearchIndex() {
                 href={a.href}
                 className="block group space-y-2 hover:opacity-90"
               >
-                <h2 className="text-xl font-semibold text-[var(--text)] group-hover:text-[var(--brand)]">
+                <h2 className="text-[1.35rem] font-semibold text-[var(--text)] group-hover:text-[var(--brand)]">
                   {a.title}
                 </h2>
-                <p className="text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
                   {a.blurb}
                 </p>
               </Link>

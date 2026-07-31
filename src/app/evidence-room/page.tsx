@@ -30,7 +30,7 @@ export default function EvidenceRoomIndex() {
   return (
     <>
       <Nav />
-      <main className="max-w-[720px] mx-auto px-5 md:px-10 py-14 md:py-20 space-y-10">
+      <main className="max-w-[920px] mx-auto px-5 md:px-10 py-14 md:py-20 space-y-10">
         <header className="space-y-4">
           <p className="text-[13px] font-medium tracking-[0.08em] uppercase text-[var(--text-muted)]">
             Evidence Room
