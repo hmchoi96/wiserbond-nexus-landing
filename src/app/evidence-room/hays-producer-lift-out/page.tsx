@@ -167,7 +167,8 @@ export default function Page() {
           that is litigated and denied.
         </li>
         <li>
-          Do not collapse this into the 2018 pricing judgment (IBR-001). Same
+          Do not collapse this into the 2018 pricing judgment (
+          <a href="/evidence-room/hays-earn-out-success">IBR-001</a>). Same
           asset, different judgment.
         </li>
         <li>
@@ -242,6 +243,11 @@ export default function Page() {
 
       <h2>Related</h2>
       <ul>
+        <li>
+          <a href="/evidence-room/hays-earn-out-success">
+            Hays earn-out / pricing (IBR-001)
+          </a>
+        </li>
         <li>
           <a href="/research/precedent-transferability">
             Precedent transferability

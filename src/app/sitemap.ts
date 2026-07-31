@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const evidence = [
     '/evidence-room',
     '/evidence-room/hays-producer-lift-out',
+    '/evidence-room/hays-earn-out-success',
   ]
 
   return [
@@ -50,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}${path}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: path === '/evidence-room/hays-producer-lift-out' ? 0.9 : 0.8,
+      priority: path.startsWith('/evidence-room/hays') ? 0.9 : 0.8,
     })),
   ]
 }

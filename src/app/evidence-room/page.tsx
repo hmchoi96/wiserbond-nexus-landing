@@ -18,6 +18,12 @@ const precedents = [
     blurb:
       "IBR-003 · Brown & Brown / Hays retention covenants vs coordinated 2025 departures to Howden. Pending litigation.",
   },
+  {
+    href: "/evidence-room/hays-earn-out-success",
+    title: "What the Hays Earn-Out Reveals About Pricing Retention Risk",
+    blurb:
+      "IBR-001 · Same Hays asset, 2018–2021 earn-out met in full. Pair with IBR-003 — success window ≠ seven-year retention.",
+  },
 ];
 
 export default function EvidenceRoomIndex() {
