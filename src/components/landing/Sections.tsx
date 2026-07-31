@@ -226,6 +226,15 @@ export default function Sections() {
           >
             Request a 15-min Interview
           </a>
+          <p className="mt-6 text-sm text-[var(--text-muted)]">
+            <a href="/research/what-is-judgment-memory" className="hover:text-[var(--brand)] underline underline-offset-2">
+              What is judgment memory
+            </a>
+            {" · "}
+            <a href="/evidence-room/hays-producer-lift-out" className="hover:text-[var(--brand)] underline underline-offset-2">
+              Hays evidence room
+            </a>
+          </p>
         </section>
       </FadeIn>
     </div>
