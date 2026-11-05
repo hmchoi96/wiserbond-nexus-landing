@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { BRAND, SITE } from "@/lib/site";
-import { CALENDLY_URL } from "@/lib/config/calendly";
+import { LEGACY_BRAND as BRAND, SITE } from "@/lib/site";
+
 
 type Breadcrumb = { name: string; href: string };
 
@@ -141,13 +141,13 @@ export default function ResearchArticle({
             {BRAND.product} {BRAND.doesNot}
           </p>
           <a
-            href={CALENDLY_URL}
+            href="/archive/akashic-v1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-11 px-6 items-center justify-center rounded-md text-base font-semibold text-white hover:bg-[var(--brand-hover)] transition-colors"
             style={{ background: "var(--brand)" }}
           >
-            Request a 15-min Interview
+            View the V1 archive
           </a>
         </aside>
       </main>

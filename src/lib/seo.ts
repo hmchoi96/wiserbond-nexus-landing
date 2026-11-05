@@ -8,7 +8,7 @@ export const defaultMetadata: Metadata = {
     template: "%s | Wiserbond",
   },
   description: SITE.defaultDescription,
-  applicationName: "Wiserbond Akashic Record",
+  applicationName: "Wiserbond Akashic",
   keywords: SEO_KEYWORDS,
   openGraph: {
     type: "website",
@@ -17,11 +17,11 @@ export const defaultMetadata: Metadata = {
     title: SITE.defaultTitle,
     description: SITE.defaultDescription,
     images: [
-      { 
-        url: SITE.ogImage, 
-        width: 1200, 
-        height: 630, 
-        alt: "Wiserbond Akashic Record — Judgment Memory System" 
+      {
+        url: SITE.ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Wiserbond Akashic: Shared Agent Memory"
       }
     ],
     locale: SITE.locale,
@@ -37,7 +37,6 @@ export const defaultMetadata: Metadata = {
   alternates: {
     canonical: SITE.baseUrl,
     languages: {
-      en: `${SITE.baseUrl}/en/`,
       "x-default": SITE.baseUrl,
     },
   },

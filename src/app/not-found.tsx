@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { AKASHIC_SETUP_URL } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function NotFound() {
             <Link href="/">Go Home</Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/demo">Request Demo</Link>
+            <a href={AKASHIC_SETUP_URL}>Connect Akashic</a>
           </Button>
         </div>
       </div>
