@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "./FadeIn";
 import ArchitectureMindmap from "./ArchitectureMindmap";
 import ReuseWalkthrough from "./ReuseWalkthrough";
-import { CALENDLY_URL } from "@/lib/config/calendly";
+
 
 function SectionKicker({ children }: { children: string }) {
   return (
@@ -206,37 +207,10 @@ export default function Sections() {
         </section>
       </FadeIn>
 
-      <FadeIn>
-        <section
-          id="contact"
-          className="py-20 md:py-24 border-t border-[var(--border-soft)] text-center"
-        >
-          <h2 className="font-serif text-[28px] md:text-[36px] font-medium text-[var(--brand)] mb-4">
-            Pilot with your team
-          </h2>
-          <p className="text-base md:text-lg text-[var(--text-secondary)] mb-8 max-w-xl mx-auto">
-            Fifteen minutes. No pitch deck — questions about how you preserve decisions.
-          </p>
-          <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex px-7 py-3.5 rounded-md text-white text-base font-semibold transition-colors hover:bg-[var(--brand-hover)]"
-            style={{ background: "var(--brand)" }}
-          >
-            Request a 15-min Interview
-          </a>
-          <p className="mt-6 text-sm text-[var(--text-muted)]">
-            <a href="/research/what-is-judgment-memory" className="hover:text-[var(--brand)] underline underline-offset-2">
-              What is judgment memory
-            </a>
-            {" · "}
-            <a href="/evidence-room/hays-producer-lift-out" className="hover:text-[var(--brand)] underline underline-offset-2">
-              Hays evidence room
-            </a>
-          </p>
-        </section>
-      </FadeIn>
+      <section className="py-16 border-t border-[var(--border-soft)] text-[var(--text-secondary)]">
+        <p>V1 is archived. Wiserbond now focuses on shared memory for connected agents.</p>
+        <Link href="/" className="inline-block mt-4 underline underline-offset-4">Explore Akashic →</Link>
+      </section>
     </div>
   );
 }

@@ -12,8 +12,7 @@ export default function Tools() {
         <div className="text-center space-y-4 mb-12">
           <h1 className="text-3xl font-semibold">Product</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Wiserbond builds Akashic Record — a judgment memory system for
-            private equity teams.
+            Wiserbond builds Akashic, shared memory for your connected agents.
           </p>
         </div>
 
