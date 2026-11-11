@@ -14,9 +14,9 @@ export default function Image() {
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
         <span style={{ fontSize: 78, letterSpacing: -4 }}>Your next agent.</span>
-        <span style={{ fontSize: 78, letterSpacing: -4, color: "#526c58" }}>The same context.</span>
+        <span style={{ fontSize: 78, letterSpacing: -4, color: "#051f5b" }}>The same context.</span>
       </div>
-      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#586455" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22, color: "#4f5b70" }}>
         <span>Shared memory for your agents.</span>
         <span>Built by Wiserbond</span>
       </div>
