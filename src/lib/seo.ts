@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { SITE, SEO_KEYWORDS } from "./site";
+import { SITE, SEO_KEYWORDS, PRODUCT_NAME } from "./site";
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
     default: SITE.defaultTitle,
-    template: "%s | Wiserbond",
+    template: `%s | ${PRODUCT_NAME}`,
   },
   description: SITE.defaultDescription,
-  applicationName: "Wiserbond Akashic",
+  applicationName: PRODUCT_NAME,
   keywords: SEO_KEYWORDS,
   openGraph: {
     type: "website",
@@ -21,7 +21,7 @@ export const defaultMetadata: Metadata = {
         url: SITE.ogImage,
         width: 1200,
         height: 630,
-        alt: "Wiserbond Akashic: Shared Agent Memory"
+        alt: `${PRODUCT_NAME}: Shared memory for your agents`
       }
     ],
     locale: SITE.locale,
@@ -48,7 +48,6 @@ export const defaultMetadata: Metadata = {
   category: "business",
   icons: {
     icon: "/favicon.ico",
-    apple: "/icons/apple-touch-icon.png",
   },
 };
 

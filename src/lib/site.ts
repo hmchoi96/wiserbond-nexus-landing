@@ -1,13 +1,15 @@
 export const PRODUCT_NAME = "Akashic"; // Working name; branding is not finalized.
 
+export const COMPANY_NAME = "Wiserbond Technologies Inc.";
+
 export const SITE = {
-  name: "Wiserbond",
+  name: PRODUCT_NAME,
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com",
-  defaultTitle: `Wiserbond | ${PRODUCT_NAME}: Shared Agent Memory`,
+  defaultTitle: `${PRODUCT_NAME} | Shared memory for your agents`,
   defaultDescription: `Carry context, decisions and reasoning between your connected agents with ${PRODUCT_NAME}.`,
   twitter: "@wiserbond",
-  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/og/wiserbond-og.jpg`,
-  ogImageTwitter: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/og/wiserbond-og-800.jpg`,
+  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/opengraph-image`,
+  ogImageTwitter: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/opengraph-image`,
   locale: "en_US",
 };
 
