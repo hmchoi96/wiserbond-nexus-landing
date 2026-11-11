@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Akashic public website
 
-## Getting Started
+Product-facing website operated by Wiserbond Technologies Inc. The main site
+introduces shared memory for connected agents. Earlier Akashic Record V1 material
+is retained under `/archive/akashic-v1`, with its research and evidence URLs intact.
 
-First, run the development server:
+## Run and build
 
-```bash
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Development uses port 3001. Production is the existing Vercel project connected to
+this repository; updating the PR branch creates a preview, and merging to main
+triggers the production deployment. Preview access may require Vercel sign-in.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Product and domain configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/lib/site.ts`: product working name, legal operator, setup URL and site origin.
+- `NEXT_PUBLIC_SITE_URL`: canonical marketing-site origin; defaults to
+  `https://www.wiserbond.com`. Changing it does not configure DNS or migrate hosting.
+- `NEXT_PUBLIC_GA_ID`: optional existing analytics integration.
+- `NEXT_PUBLIC_ROBOTS=noindex`: opt out of indexing in a preview environment.
 
-## Learn More
+## Agent-facing discovery
 
-To learn more about Next.js, take a look at the following resources:
+- `/agents`: visible operating guide for agents and integrators.
+- `/llms.txt`: readable plain-text description and workflow.
+- `/agent.json`: product-specific discovery metadata, not an A2A or MCP standard.
+- `src/lib/agent-guide.ts`: shared source for the text/JSON documents and tool list.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The authenticated MCP catalog and account policy are authoritative for runtime
+behavior. These public pages contain no account memory or credentials. Do not add
+claims of guaranteed automatic invocation, operator-blind encryption, benchmarks,
+or endorsements without corresponding evidence. A tool receipt proves execution,
+not real-world truth of stored statements.

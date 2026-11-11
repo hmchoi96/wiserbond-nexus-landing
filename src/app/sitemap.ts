@@ -23,35 +23,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
-    {
-      url: `${baseUrl}/pilot`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/demo`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/waitlist`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
+    { url: `${baseUrl}/agents`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${baseUrl}/archive/akashic-v1`, changeFrequency: 'yearly', priority: 0.3 },
     ...research.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: path === '/research/judgment-memory-framework' || path === '/research/what-is-judgment-memory' ? 0.9 : 0.8,
+      priority: 0.3,
     })),
     ...evidence.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: path.startsWith('/evidence-room/hays') ? 0.9 : 0.8,
+      priority: 0.3,
     })),
   ]
 }

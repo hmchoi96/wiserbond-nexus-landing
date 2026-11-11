@@ -1,17 +1,20 @@
+export const PRODUCT_NAME = "Akashic"; // Working name; branding is not finalized.
+
+export const COMPANY_NAME = "Wiserbond Technologies Inc.";
+
 export const SITE = {
-  name: "Wiserbond",
+  name: PRODUCT_NAME,
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com",
-  defaultTitle: "Wiserbond | Akashic Record — Judgment Memory",
-  defaultDescription:
-    "Turn past decisions into reusable judgment memory. Offline-first, on-prem. Your data never leaves your network.",
+  defaultTitle: `${PRODUCT_NAME} | Shared memory for your agents`,
+  defaultDescription: `Carry context, decisions and reasoning between your connected agents with ${PRODUCT_NAME}.`,
   twitter: "@wiserbond",
-  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/og/wiserbond-og.jpg`,
-  ogImageTwitter: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/og/wiserbond-og-800.jpg`,
+  ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/opengraph-image`,
+  ogImageTwitter: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/opengraph-image`,
   locale: "en_US",
 };
 
 /** Canonical brand/product copy — keep identical across site, LinkedIn, directories. */
-export const BRAND = {
+export const LEGACY_BRAND = {
   company:
     "Wiserbond develops systems that preserve and reuse organizational judgment.",
   product:
@@ -19,8 +22,7 @@ export const BRAND = {
   companyProduct:
     "Wiserbond builds Akashic Record, a judgment memory system for private equity teams.",
   icp: "It is initially designed for buyout firms conducting repeated add-on acquisitions, beginning with insurance brokerage roll-ups.",
-  does:
-    "It preserves the conditions, judgment, reasoning, evidence, and outcomes behind past investment decisions and retrieves relevant precedents when similar conditions recur.",
+  does: "It preserves the conditions, judgment, reasoning, evidence, and outcomes behind past investment decisions and retrieves relevant precedents when similar conditions recur.",
   doesNot:
     "It does not recommend whether a firm should complete a transaction or replace investment committee judgment.",
   author: {
@@ -29,16 +31,16 @@ export const BRAND = {
   },
 } as const;
 
+export const BRAND = {
+  company: "Wiserbond builds shared memory infrastructure for AI agents.",
+  product: `${PRODUCT_NAME} is shared memory for your connected agents, preserving context, decisions and reasoning across apps.`,
+} as const;
+
+export const AKASHIC_SETUP_URL = "https://akashic-v2.onrender.com/setup";
 export const SEO_KEYWORDS = [
-  "judgment memory",
-  "precedent-based judgment memory",
-  "private equity judgment memory",
-  "akashic record",
-  "CJR",
-  "condition judgment reasoning",
-  "precedent transferability",
-  "investment decision provenance",
-  "institutional memory private equity",
-  "on-prem",
-  "offline-first",
+  "Akashic V2",
+  "shared agent memory",
+  "cross-app context",
+  "MCP memory",
+  "Wiserbond",
 ];

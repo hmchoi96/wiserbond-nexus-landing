@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ResearchArticle from "@/components/site/ResearchArticle";
-import { BRAND } from "@/lib/site";
+import { LEGACY_BRAND as BRAND } from "@/lib/site";
 import { canonicalFor } from "@/lib/url";
 
 const title = "Decision Archive versus Judgment Memory";
