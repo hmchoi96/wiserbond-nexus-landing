@@ -209,7 +209,7 @@ export default function Sections() {
 
       <section className="py-16 border-t border-[var(--border-soft)] text-[var(--text-secondary)]">
         <p>V1 is archived. Wiserbond now focuses on shared memory for connected agents.</p>
-        <Link href="/" className="inline-block mt-4 underline underline-offset-4">Explore Akashic →</Link>
+        <Link href="/" className="inline-block mt-4 underline underline-offset-4">Explore Wibee →</Link>
       </section>
     </div>
   );
