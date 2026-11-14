@@ -16,7 +16,7 @@ assert.match(home, /property="og:title" content="Wibee/);
 assert.match(home, /name="keywords" content="Wibee,위비,/);
 assert.doesNotMatch(home, /name="keywords" content="[^"]*Akashic V2/);
 assert.equal(discovery.name, 'Wibee');
-assert.equal(discovery.schema, 'akashic.public-discovery/1');
+assert.equal(discovery.schema, 'wibee.public-discovery/1');
 assert.equal(discovery.setup, service + '/setup');
 assert.equal(discovery.account, service + '/account');
 assert.equal(discovery.connection_manifest, service + '/setup.json');

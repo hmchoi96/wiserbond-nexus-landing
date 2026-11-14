@@ -5,7 +5,7 @@ import { ArrowUpRight, ArrowRight, GitBranch, Fingerprint, ReceiptText, ShieldCh
 import MemoryPreview from "@/components/landing/MemoryPreview";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { AKASHIC_SETUP_URL, BRAND, SITE, PRODUCT_NAME, COMPANY_NAME } from "@/lib/site";
+import { WIBEE_SETUP_URL, BRAND, SITE, PRODUCT_NAME, COMPANY_NAME } from "@/lib/site";
 import { canonicalFor } from "@/lib/url";
 import "./v2.css";
 
@@ -32,7 +32,7 @@ export default function Page() {
           <h1>Stop <span className="wibee-keep-word">re-explaining</span> yourself to every AI app.</h1>
           <p className="v2-lead">Your decisions, the reasons behind them, and where you left off. Wibee keeps that context available to your next connected agent.</p>
           <div className="v2-actions">
-            <a className="v2-button" href={AKASHIC_SETUP_URL}>Connect your first app <ArrowUpRight size={18} aria-hidden="true" /></a>
+            <a className="v2-button" href={WIBEE_SETUP_URL}>Connect your first app <ArrowUpRight size={18} aria-hidden="true" /></a>
             <a className="v2-text-link" href="#how-it-works">See how it works <ArrowRight size={17} aria-hidden="true" /></a>
           </div>
           <ul className="wibee-trust" aria-label="Memory controls">
@@ -72,7 +72,7 @@ export default function Page() {
       <section id="connections" className="v2-wrap v2-section">
         <div className="v2-section-heading"><h2>Your apps.<br />A shared starting point.</h2><p>Keep using the tools you like. Choose an app below for its connection steps.</p></div>
         <div className="v2-hosts">
-          {hosts.map(host=><a key={host.name} href={AKASHIC_SETUP_URL} className="wibee-host-card" aria-label={host.guide}>
+          {hosts.map(host=><a key={host.name} href={WIBEE_SETUP_URL} className="wibee-host-card" aria-label={host.guide}>
             <div className="wibee-host-top"><Image src={`/brand/hosts/${host.icon}.svg`} alt="" width={36} height={36} unoptimized /><span>{host.type}</span></div>
             <h3>{host.name}</h3><span className="wibee-host-link">Connection guide <ArrowUpRight size={16} aria-hidden="true" /></span>
           </a>)}
@@ -104,7 +104,7 @@ export default function Page() {
       </section>
       <section className="v2-wrap v2-cta">
         <h2>Less catching up.<br />More carrying on.</h2>
-        <a className="v2-button" href={AKASHIC_SETUP_URL}>Connect your first app <ArrowUpRight size={18} aria-hidden="true" /></a>
+        <a className="v2-button" href={WIBEE_SETUP_URL}>Connect your first app <ArrowUpRight size={18} aria-hidden="true" /></a>
         <p className="v2-caption">Start with one app. Bring another when you’re ready.</p>
       </section>
     </main>

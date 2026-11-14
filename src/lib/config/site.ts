@@ -12,7 +12,7 @@ export const nav = [
 ];
 export const tools = [
   {
-    slug: "akashic-v2",
+    slug: "wibee",
     name: PRODUCT_NAME,
     tagline: "Shared memory for your connected agents",
     href: "/",

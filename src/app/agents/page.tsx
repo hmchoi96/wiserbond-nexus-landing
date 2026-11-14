@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
-import { AKASHIC_SETUP_URL, PRODUCT_NAME } from "@/lib/site";
+import { WIBEE_SETUP_URL, PRODUCT_NAME } from "@/lib/site";
 import { MEMORY_SERVICE_URL, publicMemoryTools } from "@/lib/agent-guide";
 import { canonicalFor } from "@/lib/url";
 import "../v2.css";
@@ -26,7 +26,7 @@ export default function Agents() {
       <p className="v2-eyebrow">CONNECTION BEFORE EXECUTION</p><h2>Use the authorized connection.</h2>
       <p className="v2-agent-copy">The owner signs in and approves their app. Use that app’s existing authenticated MCP connection. Fetch the runtime tool catalog for exact schemas and available permissions.</p>
       <div className="v2-endpoint"><span>STREAMABLE HTTP MCP</span><code>{MEMORY_SERVICE_URL}/mcp</code></div>
-      <div className="v2-actions"><a className="v2-text-link" href={AKASHIC_SETUP_URL}>Human connection guide <ArrowUpRight size={16} /></a><a className="v2-text-link" href={`${MEMORY_SERVICE_URL}/setup.json`}>Current host manifest <ArrowUpRight size={16} /></a></div>
+      <div className="v2-actions"><a className="v2-text-link" href={WIBEE_SETUP_URL}>Human connection guide <ArrowUpRight size={16} /></a><a className="v2-text-link" href={`${MEMORY_SERVICE_URL}/setup.json`}>Current host manifest <ArrowUpRight size={16} /></a></div>
       <p className="v2-caption">OAuth with PKCE · Never ask for account passwords or tokens in a memory payload.</p>
     </div></section>
     <section className="v2-wrap v2-section">
@@ -43,7 +43,7 @@ export default function Agents() {
       <h2>Keep capture inside its scope.</h2><div className="v2-steps"><article><span>MANUAL</span><h3>Save on an actual request.</h3><p>Use explicit capture only when the user actually asks to save. Never relabel proactive saving as explicit to avoid a restriction.</p></article><article><span>AUTOMATIC</span><h3>Preserve useful new changes.</h3><p>Read the current policy revision, exclusions and source permissions first. Make a compact contribution within scope and host authorization; verify the returned result.</p></article><article><span>PAUSED</span><h3>Respect the stop.</h3><p>New agent contributions are blocked, including explicit save requests. A denial is not a reason to retry through shell, another connection or another destination.</p></article></div>
       <div className="v2-boundary"><strong>Cloud memory, with controls.</strong><p>Memory is processed by the service and shared with authorized apps. The default retention is 45 days; passive reading does not renew it. Actual reuse may renew retention. Explicit forgetting deletes versions of the key and blocks matching reinsertion.</p></div>
     </section>
-    <section className="v2-wrap v2-cta"><p className="v2-eyebrow">SETUP IS HUMAN. CONTINUITY IS SHARED.</p><h2>Ready for the next agent.</h2><div className="v2-agent-cta"><a className="v2-button" href={AKASHIC_SETUP_URL}>Connect an agent <ArrowUpRight size={17} /></a><Link className="v2-text-link" href="/llms.txt">Read the text guide <ArrowRight size={16} /></Link></div><p className="v2-caption">Host support, tool discovery and approvals vary. Connection alone does not guarantee automatic use.</p></section>
+    <section className="v2-wrap v2-cta"><p className="v2-eyebrow">SETUP IS HUMAN. CONTINUITY IS SHARED.</p><h2>Ready for the next agent.</h2><div className="v2-agent-cta"><a className="v2-button" href={WIBEE_SETUP_URL}>Connect an agent <ArrowUpRight size={17} /></a><Link className="v2-text-link" href="/llms.txt">Read the text guide <ArrowRight size={16} /></Link></div><p className="v2-caption">Host support, tool discovery and approvals vary. Connection alone does not guarantee automatic use.</p></section>
     <div className="v2-wrap v2-archive"><p>Akashic Record V1 is earlier investment judgment-memory research, separate from this shared-memory service.</p><Link href="/archive/akashic-v1">V1 archive <ArrowRight size={16} /></Link></div>
   </main><Footer /></>;
 }

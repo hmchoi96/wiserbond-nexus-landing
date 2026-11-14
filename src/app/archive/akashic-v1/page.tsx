@@ -29,7 +29,7 @@ export default function Archive() {
             our active product.
           </p>
           <div className="flex flex-wrap gap-6 mt-8 underline underline-offset-4">
-            <Link href="/">Explore Akashic V2</Link>
+            <Link href="/">Explore Wibee V2</Link>
             <Link href="/research">V1 research</Link>
             <Link href="/evidence-room">V1 evidence</Link>
           </div>
