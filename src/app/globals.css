@@ -45,7 +45,11 @@
 
 :root {
   /* Akashic Record product tokens */
-  --page-bg: #FAF6F0;
+  --page-bg: #FFFFFF;
+  --honey: #FFC23D;
+  --honey-deep: #FFB000;
+  --honey-soft: #FFF3CF;
+  --honey-line: #F0D78A;
   --surface: #FFFFFF;
   --surface-muted: #F1ECE5;
   --brand: #051F5B;
