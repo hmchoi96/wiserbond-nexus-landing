@@ -12,7 +12,7 @@ export default function EvidenceRoomLayout({
         V1 archive: retained for reference. Wiserbond now focuses on shared
         agent memory.{" "}
         <Link href="/" className="underline underline-offset-4">
-          Explore Akashic
+          Explore Wibee
         </Link>
       </aside>
       {children}

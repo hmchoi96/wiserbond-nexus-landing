@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { AKASHIC_SETUP_URL } from "@/lib/site";
+import { WIBEE_SETUP_URL } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function NotFound() {
             <Link href="/">Go Home</Link>
           </Button>
           <Button variant="outline" asChild>
-            <a href={AKASHIC_SETUP_URL}>Connect Akashic</a>
+            <a href={WIBEE_SETUP_URL}>Connect Wibee</a>
           </Button>
         </div>
       </div>

@@ -36,7 +36,7 @@ export const BRAND = {
   product: `${PRODUCT_NAME} is shared memory for your connected agents, preserving context, decisions and reasoning across apps.`,
 } as const;
 
-export const AKASHIC_SETUP_URL = "https://wibee.wiserbond.com/setup";
+export const WIBEE_SETUP_URL = "https://wibee.wiserbond.com/setup";
 export const SEO_KEYWORDS = [
   "Wibee",
   "위비",

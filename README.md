@@ -1,4 +1,4 @@
-# Akashic public website
+# Wibee public website
 
 Product-facing website operated by Wiserbond Technologies Inc. The main site
 introduces shared memory for connected agents. Earlier Akashic Record V1 material
