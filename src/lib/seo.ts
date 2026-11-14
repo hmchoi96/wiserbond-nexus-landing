@@ -47,8 +47,8 @@ export const defaultMetadata: Metadata = {
   },
   category: "business",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.png",
+    icon: "/favicon.ico?v=20261114-light",
+    apple: "/apple-icon.png?v=20261114-light",
   },
 };
 
