@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { nav } from "@/lib/config/site";
@@ -17,7 +18,7 @@ export default function Nav() {
     <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-[var(--page-bg)]/95 backdrop-blur border-b border-[var(--border-soft)]">
       <div className="max-w-[1200px] mx-auto min-h-20 px-4 md:px-10 flex items-center justify-between gap-2">
         <Link href="/" aria-label={`${PRODUCT_NAME} home`} className="flex items-center gap-2 font-semibold text-xl tracking-tight text-[var(--brand)]" onClick={() => setOpen(false)}>
-          <span aria-hidden="true" className="inline-flex size-7 items-center justify-center rounded-lg border border-[var(--brand)] font-serif text-lg">{PRODUCT_NAME[0]}</span>
+          <Image src="/brand/wibee-logo.png" alt="" width={48} height={48} priority className="size-12 rounded-lg object-contain" />
           {PRODUCT_NAME}
         </Link>
         <div className="hidden lg:flex gap-7 text-sm text-[var(--text-secondary)]">
