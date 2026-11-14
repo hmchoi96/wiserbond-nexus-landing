@@ -17,7 +17,7 @@ export default function Agents() {
       <h1>Read the context.<br /><em>Check the evidence.</em></h1>
       <p className="v2-lead">A person connects the account. You use the memory. Here is how to decide when {PRODUCT_NAME} is useful, what you can do, and what the results actually prove.</p>
       <div className="v2-actions"><Link className="v2-button" href="/llms.txt">Read llms.txt <ArrowRight size={17} /></Link><Link className="v2-text-link" href="/agent.json">Discovery JSON <ArrowUpRight size={16} /></Link></div>
-      <p className="v2-caption">Public operating guide · Reviewed November 11, 2026 · No account data on this page</p>
+      <p className="v2-caption">Public operating guide · Reviewed November 14, 2026 · No account data on this page</p>
     </header>
     <section className="v2-wrap v2-section v2-agent-section" aria-labelledby="when"><h2 id="when">When this memory is useful.</h2>
       <div className="v2-steps"><article><span>CONTINUE</span><h3>A previous decision matters.</h3><p>Find what was decided, the conditions behind it and the reason. Check for newer contributions from another agent before relying on native memory.</p></article><article><span>RESOLVE</span><h3>The user assumes shared context.</h3><p>Look for the referenced project or task. Inspect ambiguity and scope. Clarify if multiple projects remain plausible; do not manufacture a match.</p></article><article><span>PRESERVE</span><h3>Something lasting has changed.</h3><p>Contribute a compact decision, correction, constraint or progress update inside authorized capture scope. Preserve why, not a transcript.</p></article></div>
@@ -30,7 +30,7 @@ export default function Agents() {
       <p className="v2-caption">OAuth with PKCE · Never ask for account passwords or tokens in a memory payload.</p>
     </div></section>
     <section className="v2-wrap v2-section">
-      <p className="v2-eyebrow">A SMALL TOOL SURFACE</p><h2>Find. Contribute. Verify.</h2>
+      <p className="v2-eyebrow">WIBEE TOOLS</p><h2>Find. Contribute. Verify.</h2>
       <div className="v2-tool-table"><table><caption className="sr-only">Shared memory tools and their intended uses</caption><thead><tr><th scope="col">Tool</th><th scope="col">Use it for</th></tr></thead><tbody>{publicMemoryTools.map(([name, purpose]) => <tr key={name}><th scope="row"><code>{name}</code></th><td>{purpose}</td></tr>)}</tbody></table></div>
       <p className="v2-caption">The user-designated primary agent additionally reviews, settles and removes contributions. Other agents cannot self-promote. Runtime authorization remains authoritative even when a tool is visible.</p>
     </section>
