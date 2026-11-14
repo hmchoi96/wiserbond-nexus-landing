@@ -21,6 +21,13 @@ export default function MemoryPreview() {
         <span className="v2-dots" aria-hidden="true">● ● ●</span>
         <span>One thread, two apps</span>
       </div>
+      <div className="wibee-handoff" aria-label="Illustrative handoff from ChatGPT through Wibee to Claude Code">
+        <span><Image src="/brand/hosts/chatgpt.svg" alt="" width={24} height={24} unoptimized /><strong>ChatGPT</strong><small>Save context</small></span>
+        <ArrowRight size={16} aria-hidden="true" />
+        <span><Image src="/brand/wibee-logo.svg" alt="" width={24} height={24} unoptimized /><strong>Wibee</strong><small>Shared memory</small></span>
+        <ArrowRight size={16} aria-hidden="true" />
+        <span><Image src="/brand/hosts/claude.svg" alt="" width={24} height={24} unoptimized /><strong>Claude Code</strong><small>Continue work</small></span>
+      </div>
       <div className="v2-demo-tabs" role="tablist" aria-label="Explore the memory workflow">
         {views.map((step, index) => (
           <button
@@ -52,7 +59,7 @@ export default function MemoryPreview() {
             <span className="v2-demo-status"><Check size={11} aria-hidden="true" />{view.status}</span>
           </div>
           <p>“{view.question}”</p>
-          <div className="v2-note-meta"><span>Example · ChatGPT</span><span>Decision + reason</span></div>
+          <div className="v2-note-meta"><span>Example · {selected === 2 ? "Claude Code" : "ChatGPT"}</span><span>Decision + reason</span></div>
         </div>
         <div className="v2-memory-center">
           <Image src="/brand/wibee-logo.svg" alt="" width={30} height={30} unoptimized aria-hidden="true" />

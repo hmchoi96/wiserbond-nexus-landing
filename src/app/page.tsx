@@ -28,8 +28,8 @@ export default function Page() {
     <main id="main-content" className="v2-main">
       <section className="v2-hero v2-wrap">
         <div>
-          <p className="v2-pill-tag">A little memory. A lot less explaining.</p>
-          <h1>Stop re-explaining yourself to every AI app.</h1>
+          <p className="v2-pill-tag">Your context, ready for the next app.</p>
+          <h1>Stop <span className="wibee-keep-word">re-explaining</span> yourself to every AI app.</h1>
           <p className="v2-lead">Your decisions, the reasons behind them, and where you left off. Wibee keeps that context available to your next connected agent.</p>
           <div className="v2-actions">
             <a className="v2-button" href={AKASHIC_SETUP_URL}>Connect your first app <ArrowUpRight size={18} aria-hidden="true" /></a>
@@ -46,12 +46,12 @@ export default function Page() {
       </section>
 
       <section id="how-it-works" className="v2-wrap v2-section wibee-proof">
-        <div className="v2-section-heading"><h2>A memory with<br />a little more to it.</h2><p>Keep the useful part of the conversation, with enough background for the next agent to understand it.</p></div>
+        <div className="v2-section-heading"><h2>Decisions, with<br />the context attached.</h2><p>Keep the useful part of the conversation, with enough background for the next agent to understand it.</p></div>
         <div className="v2-controls">
           {[
             [GitBranch, "A draft is still a draft.", "Fresh contributions stay temporary. The agent you choose to review and organize memory can mark them as reviewed."],
             [Fingerprint, "Keep the why. And the where.", "See the source, reason and revision behind a memory, so the next agent has more than a loose fact."],
-            [ReceiptText, "Check the call.", "Memory tools return a receipt. Inspect the actual call and its result when you need to check what happened."],
+            [ReceiptText, "See the memory call.", "Each memory tool call returns a receipt with its result. Check what was read or saved."],
           ].map(([Icon, title, body]) => {const I = Icon as typeof GitBranch; return <article key={title as string}><I size={26} aria-hidden="true" /><h3>{title as string}</h3><p>{body as string}</p></article>;})}
         </div>
       </section>
