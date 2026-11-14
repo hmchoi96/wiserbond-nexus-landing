@@ -530,3 +530,64 @@ footer a:focus-visible {
 .v2-tool-table tr:last-child th, .v2-tool-table tr:last-child td { border-bottom: 0; }
 .v2-agent-cta { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; align-items: center; }
 @media(max-width:640px) { .v2-agent-intro { grid-template-columns: 1fr; gap: 24px; padding-top: 50px; padding-bottom: 50px; } .v2-tool-table th, .v2-tool-table td { padding: 14px; font-size: 12px; } .v2-tool-table tbody th { max-width: 125px; font-size: 10px; } }
+
+/* Wibee light direction: honey + navy, sans headline */
+.v2-pill-tag { display: inline-flex; margin-bottom: 24px; padding: 6px 13px; border-radius: 99px; background: var(--honey); color: var(--brand); font-size: 13px; font-weight: 600; }
+.v2-hero h1 { font-family: var(--font-geist-sans), "Inter", system-ui, sans-serif; font-weight: 700; letter-spacing: -0.04em; line-height: 1.05; font-size: clamp(40px, 4.8vw, 66px); }
+.v2-lead { font-size: 19px; line-height: 1.6; color: var(--text); }
+.v2-button { background: var(--honey); color: var(--brand); font-weight: 600; }
+.v2-button:hover { background: var(--honey-deep); }
+.v2-memory { background: var(--honey-soft); border-color: var(--honey-line); border-radius: 24px; box-shadow: 0 24px 60px #ffc23d40; transform: rotate(-1.5deg); }
+.v2-window-bar { letter-spacing: 0; font-size: 12px; font-weight: 600; color: var(--brand); }
+.v2-dots { color: var(--honey-deep); }
+.v2-demo-tabs { background: #ffe7a3; border-radius: 12px; }
+.v2-demo-tabs button { border-radius: 9px; }
+.v2-note, .v2-recall { background: #fff; border-color: var(--honey-line); border-radius: 16px; }
+.v2-note > p { font-family: var(--font-geist-sans), "Inter", system-ui, sans-serif; font-weight: 600; font-size: 22px; }
+.v2-note-label { letter-spacing: 0; font-size: 11px; }
+.v2-note-meta { border-top-color: var(--honey-line); }
+.v2-recall > .v2-note-label { color: var(--brand); }
+.v2-example-label { font-size: 11px; }
+.v2-hero h1 { text-wrap: balance; font-size: clamp(38px, 4.4vw, 60px); }
+
+/* Wibee's public landing: readable, warm and consistent across sections. */
+.v2-main h2, .v2-agent-guide h1 { font-family: var(--font-geist-sans), system-ui, sans-serif; font-weight: 650; letter-spacing: -.045em; }
+.v2-hero { padding-top: 80px; padding-bottom: 84px; }
+.v2-pill-tag { font-size: 12px; }
+.v2-caption { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+.v2-eyebrow { font-size: 12px; }
+.v2-main .v2-section { padding-top: 76px; padding-bottom: 76px; }
+.v2-main h3 { font-weight: 600; }
+.wibee-trust { display: flex; flex-wrap: wrap; gap: 10px 18px; padding: 0; margin: 28px 0 0; list-style: none; }
+.wibee-trust li { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text-secondary); }
+.wibee-proof { border-top: 1px solid var(--border-soft); }
+.v2-controls article { padding: 26px; background: #fafbfc; border: 1px solid #e8ebf1; border-radius: 18px; }
+.v2-controls { gap: 18px; }
+.v2-steps article { border-color: var(--honey-line); }
+.v2-steps article > span { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: var(--honey); font-weight: 650; }
+.wibee-flow-section { background: #fffbef; border-block: 1px solid #f5e8c5; }
+.v2-hosts { border: 0; gap: 16px; overflow: visible; }
+.wibee-host-card { padding: 24px; border: 1px solid #e1e6ef; border-radius: 16px; transition: transform .18s, border-color .18s; }
+.wibee-host-card:hover { transform: translateY(-3px); border-color: var(--brand); }
+.wibee-host-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.wibee-host-top img { object-fit: contain; }
+.wibee-host-top > span { font-size: 11px; color: var(--text-secondary); }
+.wibee-host-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--brand); }
+.wibee-control-section { background: #f5f7fb; }
+.wibee-control-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+.wibee-control-grid h2 { margin-top: 22px; }
+.wibee-control-list { display: grid; gap: 28px; }
+.wibee-control-list > div { border-bottom: 1px solid #dce2ee; padding-bottom: 24px; }
+.wibee-control-list strong { font-weight: 600; color: var(--brand); }
+.wibee-control-list p { margin-top: 10px; font-size: 15px; line-height: 1.8; color: var(--text-secondary); }
+.v2-cta { background: var(--honey-soft); border: 1px solid var(--honey-line); margin-bottom: 60px; }
+.v2-agent-intro { border-bottom: 0; }
+.v2-demo-panel { min-height: 350px; }
+.v2-demo-answer { min-height: 60px; }
+.v2-note-label, .v2-note-label > span, .v2-note-meta, .v2-memory-center div > span, .v2-demo-detail, .v2-example-label { font-size: 12px; line-height: 1.6; }
+.v2-note-label { flex-wrap: wrap; }
+.v2-window-bar { gap: 12px; }
+.v2-demo-tabs button { font-size: 12px; }
+@media(max-width:900px) { .v2-hosts { grid-template-columns: repeat(2,1fr); } .wibee-control-grid { gap: 35px; } .wibee-host-card { padding: 22px; } }
+@media(max-width:640px) { .v2-main .v2-section { padding-top: 52px; padding-bottom: 52px; } .v2-hero { padding-top: 42px; padding-bottom: 52px; } .v2-hero h1 { font-size: 42px; } .v2-memory { transform: none; } .wibee-control-grid { grid-template-columns: 1fr; gap: 38px; } .wibee-host-card { padding: 18px; } .wibee-host-top { align-items: start; flex-direction: column; } .v2-cta { margin-bottom: 0; } .v2-note > p { font-size: 20px; } }
+@media(prefers-reduced-motion:reduce) { .wibee-host-card { transition: none; } .wibee-host-card:hover { transform: none; } }

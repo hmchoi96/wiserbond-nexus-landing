@@ -1,12 +1,13 @@
 "use client";
 
 import { useId, useState } from "react";
-import { ArrowRight, Check, Layers } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Check } from "lucide-react";
 import { PRODUCT_NAME } from "@/lib/site";
 
 const views = [
   { label: "01 Save", heading: "A decision worth keeping", status: "Temporary", question: "Let's start with the browser version.", answer: "We want to test the workflow before committing to a mobile app.", detail: "A connected agent contributes the decision and its reason." },
-  { label: "02 Review", heading: "The reason stays attached", status: "Reviewed", question: "Browser first. Mobile after the pilot.", answer: "Reviewed by your designated primary agent. The original reasoning stays with the decision.", detail: "New contributions and reviewed memory have distinct states." },
+  { label: "02 Review", heading: "The reason stays attached", status: "Reviewed", question: "Browser first. Mobile after the pilot.", answer: "Reviewed by the agent you chose to organize your memory. The original reasoning stays with the decision.", detail: "New contributions and reviewed memory have distinct states." },
   { label: "03 Continue", heading: "Later, in another app", status: "Recalled", question: "Why did we put the mobile app on hold?", answer: "You chose to test the workflow in a browser first, before investing in a mobile app.", detail: "Another connected agent retrieves the context and continues." },
 ];
 
@@ -18,7 +19,7 @@ export default function MemoryPreview() {
     <div className="v2-memory" aria-label="Illustrative shared-memory workflow">
       <div className="v2-window-bar">
         <span className="v2-dots" aria-hidden="true">● ● ●</span>
-        <span>ONE THREAD. DIFFERENT APPS.</span>
+        <span>One thread, two apps</span>
       </div>
       <div className="v2-demo-tabs" role="tablist" aria-label="Explore the memory workflow">
         {views.map((step, index) => (
@@ -51,20 +52,20 @@ export default function MemoryPreview() {
             <span className="v2-demo-status"><Check size={11} aria-hidden="true" />{view.status}</span>
           </div>
           <p>“{view.question}”</p>
-          <div className="v2-note-meta"><span>Example project: Harbor</span><span>Decision + reason</span></div>
+          <div className="v2-note-meta"><span>Example · ChatGPT</span><span>Decision + reason</span></div>
         </div>
         <div className="v2-memory-center">
-          <Layers size={22} aria-hidden="true" />
+          <Image src="/brand/wibee-logo.svg" alt="" width={30} height={30} unoptimized aria-hidden="true" />
           <div><strong>{PRODUCT_NAME}</strong><span>Your shared memory</span></div>
           <ArrowRight size={18} className="v2-demo-arrow" aria-hidden="true" />
         </div>
         <div className="v2-recall">
-          <span className="v2-note-label">{selected === 2 ? "CONTEXT, RECOVERED" : "THE REASON, PRESERVED"}</span>
+          <span className="v2-note-label">{selected === 2 ? "Example · Claude Code" : "The why, kept with it"}</span>
           <p className="v2-demo-answer">{view.answer}</p>
         </div>
         <p className="v2-demo-detail">{view.detail}</p>
       </div>
-      <p className="v2-example-label">Interactive illustration · not a live memory session</p>
+      <p className="v2-example-label">Illustrative example · Try the tabs to follow the handoff</p>
     </div>
   );
 }

@@ -18,14 +18,14 @@ export default function Nav() {
     <nav aria-label="Main navigation" className="sticky top-0 z-50 bg-[var(--page-bg)]/95 backdrop-blur border-b border-[var(--border-soft)]">
       <div className="max-w-[1200px] mx-auto min-h-20 px-4 md:px-10 flex items-center justify-between gap-2">
         <Link href="/" aria-label={`${PRODUCT_NAME} home`} className="flex items-center gap-2 font-semibold text-xl tracking-tight text-[var(--brand)]" onClick={() => setOpen(false)}>
-          <Image src="/brand/wibee-logo.png" alt="" width={48} height={48} priority className="size-12 rounded-lg object-contain" />
+          <Image src="/brand/wibee-logo.svg" alt="" width={40} height={40} priority unoptimized className="size-10 object-contain" />
           {PRODUCT_NAME}
         </Link>
         <div className="hidden lg:flex gap-7 text-sm text-[var(--text-secondary)]">
           {nav.map((item) => <Link key={item.label} href={item.href} className="hover:underline underline-offset-4">{item.label}</Link>)}
         </div>
         <div className="flex items-center gap-2">
-          <a href={AKASHIC_SETUP_URL} className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] text-white whitespace-nowrap px-3 py-2.5 sm:px-5 sm:py-3 text-sm font-medium">Get started <ArrowUpRight size={15} aria-hidden="true" /></a>
+          <a href={AKASHIC_SETUP_URL} className="inline-flex items-center gap-2 rounded-full bg-[var(--honey)] text-[var(--brand)] font-semibold hover:bg-[var(--honey-deep)] whitespace-nowrap px-3 py-2.5 sm:px-5 sm:py-3 text-sm font-medium">Get started <ArrowUpRight size={15} aria-hidden="true" /></a>
           <button type="button" className="lg:hidden rounded-md p-2 text-[var(--brand)]" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <Menu size={22} />}</button>
         </div>
       </div>
