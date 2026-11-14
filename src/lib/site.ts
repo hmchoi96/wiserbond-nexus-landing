@@ -1,4 +1,4 @@
-export const PRODUCT_NAME = "Akashic"; // Working name; branding is not finalized.
+export const PRODUCT_NAME = "Wibee";
 
 export const COMPANY_NAME = "Wiserbond Technologies Inc.";
 
@@ -36,11 +36,13 @@ export const BRAND = {
   product: `${PRODUCT_NAME} is shared memory for your connected agents, preserving context, decisions and reasoning across apps.`,
 } as const;
 
-export const AKASHIC_SETUP_URL = "https://akashic-v2.onrender.com/setup";
+export const AKASHIC_SETUP_URL = "https://wibee.wiserbond.com/setup";
 export const SEO_KEYWORDS = [
-  "Akashic V2",
+  "Wibee",
+  "위비",
   "shared agent memory",
   "cross-app context",
   "MCP memory",
   "Wiserbond",
 ];
+
