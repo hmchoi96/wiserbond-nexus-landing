@@ -600,3 +600,50 @@ footer a:focus-visible {
 .wibee-handoff strong { font-size: 12px; font-weight: 600; line-height: 1.35; }
 .wibee-handoff small { font-size: 10px; line-height: 1.4; color: var(--text-secondary); }
 @media(max-width:640px) { .v2-hero h1 { font-size: clamp(34px, 10.6vw, 42px); } .wibee-handoff { gap: 3px; } .wibee-handoff strong { font-size: 11px; } }
+
+
+/* Possibilities: show what works now and the multiplayer direction without
+   presenting local pilots or roadmap concepts as hosted functionality. */
+.wibee-possibilities { scroll-margin-top: 90px; }
+.wibee-possibilities-heading { display: grid; grid-template-columns: 1.1fr 1fr; gap: 65px; align-items: end; margin-bottom: 39px; }
+.wibee-possibilities-heading .v2-eyebrow { margin-bottom: 17px; color: #6d5936; }
+.wibee-possibilities-heading > p { max-width: 490px; font-size: 16px; line-height: 1.85; color: var(--text-secondary); }
+.wibee-possibilities-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.wibee-possibility-card { display: flex; flex-direction: column; padding: 29px 27px 25px; border: 1px solid #e0e5ef; border-radius: 20px; background: #fff; min-width: 0; }
+.wibee-possibility-card:first-child { background: #fffbef; border-color: var(--honey-line); }
+.wibee-possibility-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--brand); }
+.wibee-stage { display: inline-flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 650; letter-spacing: -.03em; }
+.wibee-stage span { font-size: 11px; line-height: 1.35; font-weight: 700; letter-spacing: .075em; color: var(--text-secondary); }
+.v2-main .wibee-possibility-card h3 { margin: 38px 0 16px; font-size: 24px; line-height: 1.27; font-weight: 650; letter-spacing: -.035em; }
+.wibee-possibility-card > p:not(.wibee-possibility-note) { font-size: 14px; line-height: 1.8; color: var(--text-secondary); }
+.wibee-possibility-example { margin-top: auto; padding-top: 32px; display: grid; gap: 12px; }
+.wibee-possibility-example > span { font-size: 10px; font-weight: 650; letter-spacing: .13em; color: var(--text-muted); }
+.wibee-possibility-example strong { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 12px; font-weight: 650; color: var(--brand); line-height: 1.6; }
+.wibee-possibility-example svg { flex-shrink: 0; color: #7c90b8; }
+.wibee-possibility-note { margin-top: 22px; padding-top: 14px; border-top: 1px solid #e2e6ee; font-size: 12px; line-height: 1.7; color: var(--text-secondary); }
+.wibee-vision-panel { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; margin-top: 22px; padding: 43px 48px; border-radius: 24px; background: var(--brand); color: white; }
+.wibee-vision-kicker { font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--honey); margin-bottom: 18px; }
+.v2-main .wibee-vision-panel h3 { color: white; margin: 0 0 20px; font-size: clamp(25px, 2.8vw, 36px); line-height: 1.2; letter-spacing: -.035em; }
+.wibee-vision-copy > p:not(.wibee-vision-kicker) { font-size: 14px; line-height: 1.8; color: #e0e8fb; max-width: 570px; }
+.wibee-vision-copy .wibee-vision-small { font-size: 12px !important; line-height: 1.65; color: #b5c7e9 !important; margin-top: 22px; }
+.wibee-vision-path { align-self: center; display: grid; gap: 0; }
+.wibee-vision-path > div { position: relative; padding: 12px 0 19px 52px; border-left: 1px solid #536994; margin-left: 15px; min-height: 76px; }
+.wibee-vision-path > div:last-child { border-left-color: transparent; padding-bottom: 0; }
+.wibee-vision-path > div > span { position: absolute; top: 11px; left: -17px; display: flex; align-items: center; justify-content: center; width: 33px; height: 33px; border: 1px solid var(--honey); border-radius: 50%; background: var(--brand); color: var(--honey); font-size: 11px; font-weight: 700; }
+.wibee-vision-path strong { display: block; font-size: 15px; font-weight: 650; color: white; }
+.wibee-vision-path small { display: block; font-size: 12px; margin-top: 5px; color: #b9c9e6; }
+@media (max-width: 950px) {
+  .wibee-possibilities-heading { gap: 28px; }
+  .wibee-possibility-card { padding: 22px 19px; }
+  .v2-main .wibee-possibility-card h3 { font-size: 20px; }
+  .wibee-vision-panel { gap: 34px; padding: 36px 30px; }
+}
+@media (max-width: 720px) {
+  .wibee-possibilities-heading { grid-template-columns: 1fr; gap: 16px; }
+  .wibee-possibilities-grid { grid-template-columns: 1fr; }
+  .wibee-possibility-card { padding: 25px 23px; }
+  .v2-main .wibee-possibility-card h3 { margin-top: 23px; font-size: 23px; }
+  .wibee-possibility-example { padding-top: 22px; }
+  .wibee-vision-panel { grid-template-columns: 1fr; padding: 32px 25px; gap: 30px; }
+  .wibee-vision-path { margin-left: 2px; }
+}
