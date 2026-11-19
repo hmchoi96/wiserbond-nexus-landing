@@ -6,6 +6,7 @@ export const brand = {
 } as const;
 export const nav = [
   { label: "How it works", href: "/#how-it-works" },
+  { label: "What’s possible", href: "/#possibilities" },
   { label: "Connections", href: "/#connections" },
   { label: "Your memory", href: "/#controls" },
   { label: "For agents", href: "/agents" },
