@@ -7,7 +7,7 @@ import { canonicalFor } from "@/lib/url";
 export const metadata: Metadata = {
   title: "Akashic Record V1 Archive",
   description:
-    "Archived product and research: judgment memory for private equity teams. Wiserbond now focuses on Akashic V2.",
+    "Archived product and research: judgment memory for private equity teams. Wiserbond now builds Wibee, shared memory for connected AI agents.",
   alternates: { canonical: canonicalFor("/archive/akashic-v1") },
 };
 export default function Archive() {
@@ -29,7 +29,7 @@ export default function Archive() {
             our active product.
           </p>
           <div className="flex flex-wrap gap-6 mt-8 underline underline-offset-4">
-            <Link href="/">Explore Wibee V2</Link>
+            <Link href="/">Explore Wibee</Link>
             <Link href="/research">V1 research</Link>
             <Link href="/evidence-room">V1 evidence</Link>
           </div>
