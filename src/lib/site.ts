@@ -5,8 +5,8 @@ export const COMPANY_NAME = "Wiserbond Technologies Inc.";
 export const SITE = {
   name: PRODUCT_NAME,
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com",
-  defaultTitle: `${PRODUCT_NAME} | Shared memory for your agents`,
-  defaultDescription: `Carry context, decisions and reasoning between your connected agents with ${PRODUCT_NAME}.`,
+  defaultTitle: `${PRODUCT_NAME} by Wiserbond | Shared Memory for AI Agents`,
+  defaultDescription: `${PRODUCT_NAME} by Wiserbond helps ChatGPT, Claude, Cursor, and other connected AI agents share project context, decisions, and progress across apps.`,
   twitter: "@wiserbond",
   ogImage: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/opengraph-image`,
   ogImageTwitter: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.wiserbond.com"}/opengraph-image`,
